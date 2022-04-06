@@ -11,17 +11,43 @@ const Catalog = () => {
     const [category, setCategory] = useState([])
 
     const [taxeometr, setTaxeometr] = useState([])
-    
     const [gnss, setGnss] = useState([])
-    
     const [nivelir, setNivelir] = useState([])
     const [lazerniy, setLazerniy] = useState([])
     const [teodolit, setTeodolit] = useState([])
     const [trassoiskatel, setTrassoiskatel] = useState([])
     const [acsessuary, setAcsessuary] = useState([])
-
-    const [activeTab, setActiveTab] = useState('1');
     const [loading, setLoading] = useState(false)
+    const [activeTab, setActiveTab] = useState('1');
+
+    const [all, setAll] = useState([])
+    const [categories, setCategories] = useState([])
+    const [ids, setIds] = useState(1)
+
+
+    const getAll = async () => {
+        await axios.get(API + `api/category/${ids}`)
+            .then((res) => {
+                setAll(res.data.products)
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+
+    }
+
+    const getId = (id) => {
+        setIds(id)
+    }
+
+    const getAllCategory = () => {
+        axios.get(API + 'api/category')
+            .then((res) => {
+                setCategories(res.data)
+            })
+            .catch(err => { console.log(err); })
+    }
+
 
     const getCategory = async () => {
         await axios.get(API + 'api/category')
@@ -106,10 +132,15 @@ const Catalog = () => {
 
     useEffect(() => {
         setLoading(true)
+
+        getId()
+        getAll()
+        getAllCategory()
+        
         getCategory()
 
         getTaxeometr()
-        
+
         getGnss()
 
         getNivelir()
@@ -144,14 +175,14 @@ const Catalog = () => {
                     <div className="row">
                         <div className="col-lg-3">
                             <Nav tabs className='d-flex flex-column justify-content-end  nav-pills nav-justified'>
-                                {category.map((item, index) => {
+                                {categories.map((item, index) => {
                                     return (
                                         <NavItem
                                             key={index}
                                         >
                                             <NavLink
                                                 className={classnames({ active: activeTab === `${index + 1}` })}
-                                                onClick={() => { toggle(`${index + 1}`) }}
+                                                onClick={() => { toggle(`${index + 1}`); getId(item.id) }}
                                             >
                                                 {item.name}
                                             </NavLink>

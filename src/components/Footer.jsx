@@ -63,16 +63,16 @@ const Footer = () => {
                         <div className="col-lg-3 col-md-12 d-flex flex-column connect-footer">
                             <h2>Связаться с нами</h2>
                             <div className="icon-footer">
-                                <a href='https://www.instagram.com/' target={'_blank'}>
+                                <a href='https://www.instagram.com/southgroup_uz' target={'_blank'}>
                                     <img style={{ width: '30px', height: '30px' }} src="/img/instagram.png" alt="" />
                                 </a>
                                 <a href='https://www.facebook.com/' target={'_blank'}>
                                     <img style={{ width: '30px', height: '30px' }} src="/img/facebook.png" alt="" />
                                 </a>
-                                <a href='https://t.me/' target={'_blank'}>
+                                <a href='https://t.me/southgroup_uz' target={'_blank'}>
                                     <img style={{ width: '30px', height: '30px' }} src="/img/telegram.png" alt="" />
                                 </a>
-                                <a href="tel: +998946408356">
+                                <a href="tel: +998993815551">
                                     <img style={{ width: '30px', height: '30px' }} src="/img/phone.png" alt="" />
                                 </a>
                             </div>
