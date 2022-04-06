@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -10,8 +10,23 @@ import "swiper/css/pagination";
 // import required modules
 import { Autoplay, EffectCube, Pagination } from "swiper";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { API } from "../tools/constants";
 
 export default function App() {
+    const [category, setCategory] = useState([])
+
+    const getAllCategory = () => {
+        axios.get(API + 'api/category')
+            .then((res) => {
+                setCategory(res.data)
+            })
+            .catch(err => { console.log(err); })
+    }
+
+    useEffect(() => {
+        getAllCategory()
+    }, [])
     return (
         <>
 
@@ -42,7 +57,23 @@ export default function App() {
                                 className="swiper mySwiper">
 
                                 <div className="swiper-wrapper">
-                                    <SwiperSlide style={{ transition: 'all 2s ease' }} className="swiper-slide card position-relative">
+                                    {category?.map((item, index) => {
+                                        return (
+                                            <SwiperSlide key={index} style={{ transition: 'all 0.3s ease' }} className="swiper-slide card position-relative">
+                                                <img src={`/img/${item.header_image}`} alt="" className="card-img" />
+                                                <div className="blur"></div>
+                                                <div className="card-img-overlay zed">
+                                                    <h5 className="card-title">
+                                                        {item.name}
+                                                    </h5>
+                                                    <Link to={`/catalog/${item.id}`} className="myBtn uppercase"
+                                                    ><span></span> Перейти в Каталог
+                                                    </Link>
+                                                </div>
+                                            </SwiperSlide>
+                                        )
+                                    })}
+                                    {/* <SwiperSlide style={{ transition: 'all 2s ease' }} className="swiper-slide card position-relative">
                                         <img src="/img/taxeometr-header-01.webp" alt="" className="card-img" />
                                         <div className="blur"></div>
                                         <div className="card-img-overlay zed">
@@ -77,7 +108,7 @@ export default function App() {
                                             ><span></span> Перейти в Каталог
                                             </Link>
                                         </div>
-                                    </SwiperSlide>
+                                    </SwiperSlide> */}
                                 </div>
                                 <div className="swiper-pagination"></div>
                             </Swiper>

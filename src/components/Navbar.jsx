@@ -14,6 +14,8 @@ const Navbar = () => {
     const [categories, setCategories] = useState([])
     const location = useLocation()
 
+    const [ids, setIds] = useState(0)
+
 
     const [taxeometr, setTaxeometr] = useState([])
     const [gnss, setGnss] = useState([])
@@ -36,20 +38,8 @@ const Navbar = () => {
             .catch(err => { console.log(err); })
     }
 
-    const changeNavbar = () => {
-        if (window.scrollY >= 30) {
-            setNavbar(true);
-        } else {
-            setNavbar(false)
-        }
-    }
-
-    window.addEventListener('scroll', changeNavbar);
-
-
-
-    const getTaxeometr = async () => {
-        await axios.get(API + 'api/category/1')
+    const getTaxeometr = async (id) => {
+        await axios.get(API + `api/category/${id}`)
             .then((res) => {
                 setTaxeometr(res.data.products)
             })
@@ -59,15 +49,26 @@ const Navbar = () => {
 
     }
 
-    const getGnss = async () => {
-        await axios.get(API + 'api/category/2')
-            .then((res) => {
-                setGnss(res.data.products)
-            })
-            .catch((err) => {
-                console.log(err);
-            })
+    // const getGnss = async () => {
+    //     await axios.get(API + 'api/category/2')
+    //         .then((res) => {
+    //             setGnss(res.data.products)
+    //         })
+    //         .catch((err) => {
+    //             console.log(err);
+    //         })
+    // }
+    
+
+    const changeNavbar = () => {
+        if (window.scrollY >= 30) {
+            setNavbar(true);
+        } else {
+            setNavbar(false)
+        }
     }
+
+    window.addEventListener('scroll', changeNavbar);
 
     // const getNivelir = async () => {
     //     await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/nivelir')
@@ -123,7 +124,7 @@ const Navbar = () => {
     useEffect(() => {
         getAllCategory()
         getTaxeometr()
-        getGnss()
+        // getGnss()
         // getNivelir()
         // getLazerniy()
         // getTeo()
@@ -143,7 +144,9 @@ const Navbar = () => {
                                     <Link to='/catalog'
                                         onClick={() => setMyTabs(false)}
                                         className={`katalog ${location.pathname === '/catalog' ? 'active' : ''}`}
-                                        onMouseEnter={() => setMyTabs(true)}
+                                        onMouseEnter={() => {
+                                            setMyTabs(true)
+                                        }}
                                         id="katalog"
                                     >
                                         Каталог
@@ -185,8 +188,9 @@ const Navbar = () => {
                                         >
                                             <NavLink
                                                 className={classnames({ active: activeTab === `${index + 1}` })}
-                                                onClick={() => { toggle(`${index + 1}`) }}
+                                                onMouseEnter={() => { toggle(`${index + 1}`, setIds(index + 1), getTaxeometr(item.id)) }}
                                             >
+
                                                 {item.name}
                                             </NavLink>
                                         </NavItem>
@@ -196,25 +200,29 @@ const Navbar = () => {
                         </div>
                         <div className="col-6">
                             <TabContent activeTab={activeTab}>
-                                <TabPane tabId="1" className=''>
-                                    <Row>
-                                        {taxeometr.map((item, index) => {
-                                            return (
-                                                <div className="col-lg-6 mb-4" key={index}>
-                                                    <a className='d-flex align-items-center' href={`/new-catalog/${item.id}`}  >
-                                                        <div>
-                                                            <img style={{ width: '80px' }} src={`/img/${item.image01.substring(0, 40)}`} alt="" />
+                                {taxeometr?.map((item, index) => {
+                                    return (
+                                        <TabPane key={index} tabId={`${index + 1}`} className=''>
+                                            <div className="row">
+                                                {taxeometr?.map((item2, index2) => {
+                                                    return (
+                                                        <div key={index2} className="col-lg-6 mb-4">
+                                                            <a className='d-flex align-items-center' href={`/new-catalog/${item2.id}`}  >
+                                                                <div>
+                                                                    <img style={{ width: '80px' }} src={`/img/${item2.image01.substring(0, 40)}`} alt="" />
+                                                                </div>
+                                                                <div className='ml-2'>
+                                                                    <h6>{item2.title}</h6>
+                                                                </div>
+                                                            </a>
                                                         </div>
-                                                        <div className='ml-2'>
-                                                            <h6>{item.title}</h6>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            )
-                                        })}
-                                    </Row>
-                                </TabPane>
-                                <TabPane tabId="2" className='   '>
+                                                    )
+                                                })}
+                                            </div>
+                                        </TabPane>
+                                    )
+                                })}
+                                {/* <TabPane tabId="2" className='   '>
                                     <Row>
                                         {gnss.map((item, index) => {
                                             return (
@@ -321,7 +329,7 @@ const Navbar = () => {
                                             )
                                         })}
                                     </Row>
-                                </TabPane>
+                                </TabPane> */}
                             </TabContent>
                         </div>
                     </div>

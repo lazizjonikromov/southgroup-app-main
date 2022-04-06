@@ -11,21 +11,23 @@ const Contacts = () => {
               <div className="contact">
                 <img src="./img/location.png" alt="" />
                 <div className="contact-text ml-3">
-                  <h4>Город Ташкент, Яшнабадский район, Улица Тараккиёт, 2.</h4>
-                  <h5>Пн-Сб 09:00 - 18:00</h5>
+                  <h4>Город Ташкент, Мирабадский район, Улица. Богсарой 45, офис 401</h4>
+                  <h5>Пн-Сб 09:00 - 21:00</h5>
                 </div>
               </div>
               <div className="contact d-flex mt-5">
                 <img src="./img/phone-mobile.png" alt="" />
                 <div className="contact-text ml-3">
                   <h4>Контакты:</h4>
-                  <h5>+998 90 823 28 38</h5>
+                  <h5>+998 99 381 55 51</h5>
+                  <h5>+998 99 381 55 50</h5>
+                  <h5>+998 99 381 55 53</h5>
                 </div>
               </div>
               <div className="contact d-flex mt-5">
                 <img src="./img/warning.png" alt="" />
                 <div className="contact-text ml-3">
-                  <h4>Ориентир: улица Боткина</h4>
+                  <h4>Ориентир: Гостиница Россия, Тенге Банк</h4>
                 </div>
               </div>
             </div>
@@ -40,3 +42,4 @@ const Contacts = () => {
 }
 
 export default Contacts
+

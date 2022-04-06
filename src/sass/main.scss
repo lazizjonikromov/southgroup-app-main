@@ -403,7 +403,13 @@ body {
                 .swiper-pagination-bullet {
                     background: $org;
                     width: 20px;
-                    height: 20px;
+                    height: 12px;
+                    border-radius: 6px 0;
+                    transition: all .5s ease;
+
+                    &.swiper-pagination-bullet-active {
+                        width: 50px;
+                    }
                 }
             }
         }
@@ -1005,6 +1011,15 @@ body {
 
 
     .seeNewProduct {
+
+        .swiper-slide {
+            cursor: pointer;
+        }
+
+        .seeproductimg {
+            object-fit: contain;
+        }
+
         h2 {
             font-weight: 600;
             font-size: 40px;
@@ -1023,7 +1038,7 @@ body {
                 content: '';
                 width: 5px;
                 height: 5px;
-                background-color: #d6171f;
+                background-color: $org;
                 border-radius: 50%;
                 top: 11px;
                 left: -5px;
@@ -1031,12 +1046,31 @@ body {
             }
         }
 
-        .swiper-pagination {
-            .swiper-pagination-bullet {
-                background: $org;
-                width: 10px;
-                height: 10px;
+        .mySwiper2 {
+            border: 0.5px solid $dark;
+
+        }
+
+
+
+
+        .mySwiper {
+            padding: 0 30px 0 0;
+
+            .swiper-slide {
+                border: 0.5px solid $dark;
+
+                &.swiper-slide-thumb-active {
+                    border: 2px solid $org;
+                }
+
             }
+
+        }
+
+        .big_desc {
+            border: 2px solid $org;
+            padding: 20px 10px;
         }
 
 
@@ -1045,4 +1079,36 @@ body {
 
 
 
+}
+
+
+.fancybox__container {
+
+    .fancybox__backdrop {
+        backdrop-filter: blur(10px);
+    }
+
+    .fancybox__counter {
+        display: none;
+    }
+
+    .carousel__button {
+
+        &.is-next,
+        &.is-prev {
+            color: $org;
+        }
+    }
+
+    .seeproductimg {
+        object-fit: contain;
+    }
+
+    .fancybox__thumbs {
+        display: none !important;
+    }
+
+    .carousel__slide {
+        display: none;
+    }
 }

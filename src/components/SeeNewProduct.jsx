@@ -5,11 +5,12 @@ import { Modal, ModalBody } from 'reactstrap'
 import Catalog from './Catalog';
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import { Fancybox, Carousel, Panzoom } from "@fancyapps/ui";
 
+import "@fancyapps/ui/dist/fancybox.css";
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
 
-import { Pagination } from "swiper";
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import { API } from '../tools/constants';
 
@@ -49,44 +50,63 @@ const SeeNewProduct = (props) => {
                 </div> : ''}
             <div className="seeNewProduct pt-5 mt-5">
                 <div className="container">
+                    
                     <div className="row align-items-center">
                         <div className="col-lg-6 d-flex productImages">
                             {/* <img onClick={() => setIsOpen(true)} className='w-100' style={{ cursor: 'pointer', backgroundColor: 'red' }} src={`/img/${product.image}`} alt="" /> */}
                             <Swiper
                                 loop={true}
                                 spaceBetween={10}
-                                pagination={{
-                                    clickable: true,
-                                }}
                                 thumbs={{ swiper: thumbsSwiper }}
-                                modules={[FreeMode, Pagination, Thumbs]}
+                                modules={[FreeMode, Thumbs]}
                                 className="mySwiper2 w-75"
                             >
                                 <SwiperSlide>
-                                    <img alt='south-group' src={`/img/${product.image01}`} className='w-100 h-100' />
+
+                                    <a
+                                        href={`/img/${product.image01}`}
+                                        data-fancybox="gallery"
+                                    >
+                                        <img alt='south-group' src={`/img/${product.image01}`} className='w-100 h-100 seeproductimg' />
+                                    </a>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img alt='south-group' src={`/img/${product.image02}`} className='w-100 h-100' />
+
+                                    <a
+                                        href={`/img/${product.image02}`}
+                                        data-fancybox="gallery"
+                                    >
+                                        <img alt='south-group' src={`/img/${product.image02}`} className='w-100 h-100 seeproductimg' />
+                                    </a>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img alt='south-group' src={`/img/${product.image03}`} className='w-100 h-100' />
+
+                                    <a
+                                        href={`/img/${product.image03}`}
+                                        data-fancybox="gallery"
+                                    >
+                                        <img alt='south-group' src={`/img/${product.image03}`} className='w-100 h-100 seeproductimg' />
+                                    </a>
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img alt='south-group' src={`/img/${product.image04}`} className='w-100 h-100' />
+
+                                    <a
+                                        href={`/img/${product.image04}`}
+                                        data-fancybox="gallery"
+                                    >
+                                        <img alt='south-group' src={`/img/${product.image04}`} className='w-100 h-100 seeproductimg' />
+                                    </a>
                                 </SwiperSlide>
                             </Swiper>
                             <Swiper
                                 onSwiper={setThumbsSwiper}
-                                loop={true}
+                                loop={false}
                                 spaceBetween={10}
                                 direction={"vertical"}
                                 slidesPerView={4}
                                 freeMode={true}
-                                pagination={{
-                                    clickable: true,
-                                }}
                                 watchSlidesProgress={true}
-                                modules={[Pagination, FreeMode, Navigation, Thumbs]}
+                                modules={[FreeMode, Navigation, Thumbs]}
                                 className="mySwiper w-10"
                             >
                                 <SwiperSlide>
@@ -106,11 +126,9 @@ const SeeNewProduct = (props) => {
 
                         <div className="col-lg-6 ml-auto">
                             <h3>{product.title}</h3>
-                            <h4 className='mt-4'>{product.price}</h4>
 
                             <p className="mt-4">{product.description}</p>
 
-                            <a href='tel:+998946408356' className="myBtn view-tel ml-auto"><span></span> Позвонить</a>
                         </div>
                     </div>
 
@@ -121,7 +139,7 @@ const SeeNewProduct = (props) => {
                     </div>
 
                     <div className="container">
-                        <div className="row mt-4">
+                        <div className="row mt-4 big_desc">
                             <div className="col-12">
                                 {descr?.map((item, index) => {
                                     return (
