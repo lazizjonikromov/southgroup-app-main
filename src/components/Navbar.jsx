@@ -15,16 +15,7 @@ const Navbar = () => {
     const location = useLocation()
 
     const [ids, setIds] = useState(0)
-
-
     const [taxeometr, setTaxeometr] = useState([])
-    const [gnss, setGnss] = useState([])
-    const [nivelir, setNivelir] = useState([])
-    const [lazerniy, setLazerniy] = useState([])
-    const [teodolit, setTeodolit] = useState([])
-    const [trassoiskatel, setTrassoiskatel] = useState([])
-    const [acsessuary, setAcsessuary] = useState([])
-
 
     const toggle = tab => {
         if (activeTab !== tab) setActiveTab(tab);
@@ -48,16 +39,6 @@ const Navbar = () => {
             })
 
     }
-
-    // const getGnss = async () => {
-    //     await axios.get(API + 'api/category/2')
-    //         .then((res) => {
-    //             setGnss(res.data.products)
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         })
-    // }
     
 
     const changeNavbar = () => {
@@ -70,66 +51,10 @@ const Navbar = () => {
 
     window.addEventListener('scroll', changeNavbar);
 
-    // const getNivelir = async () => {
-    //     await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/nivelir')
-    //         .then((res) => {
-    //             setNivelir(res.data.nivelir)
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         })
-    // }
-
-    // const getLazerniy = async () => {
-    //     await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/lazerniy')
-    //         .then((res) => {
-    //             setLazerniy(res.data.lazerniy)
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         })
-    // }
-
-    // const getTeo = async () => {
-    //     await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/teodolit')
-    //         .then((res) => {
-    //             setTeodolit(res.data.teodolit)
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         })
-    // }
-
-    // const getTrass = async () => {
-    //     await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/trassoiskatel')
-    //         .then((res) => {
-    //             setTrassoiskatel(res.data.trassoiskatel)
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         })
-    // }
-
-    // const getAcs = async () => {
-    //     await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/acsessuary')
-    //         .then((res) => {
-    //             setAcsessuary(res.data.acsessuary)
-    //         })
-    //         .catch((err) => {
-    //             console.log(err);
-    //         })
-    // }
-
 
     useEffect(() => {
         getAllCategory()
         getTaxeometr()
-        // getGnss()
-        // getNivelir()
-        // getLazerniy()
-        // getTeo()
-        // getTrass()
-        // getAcs()
     }, [])
 
     return (

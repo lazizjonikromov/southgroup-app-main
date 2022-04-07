@@ -110,16 +110,16 @@ const SeeNewProduct = (props) => {
                                 className="mySwiper w-10"
                             >
                                 <SwiperSlide>
-                                    <img alt='south-group' src={`/img/${product.image01}`} className='w-100 h-100' />
+                                    <img alt='south-group' src={`/img/${product.image01}`} className='w-100 h-100 seeproductimg' />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img alt='south-group' src={`/img/${product.image02}`} className='w-100 h-100' />
+                                    <img alt='south-group' src={`/img/${product.image02}`} className='w-100 h-100 seeproductimg' />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img alt='south-group' src={`/img/${product.image03}`} className='w-100 h-100' />
+                                    <img alt='south-group' src={`/img/${product.image03}`} className='w-100 h-100 seeproductimg' />
                                 </SwiperSlide>
                                 <SwiperSlide>
-                                    <img alt='south-group' src={`/img/${product.image04}`} className='w-100 h-100' />
+                                    <img alt='south-group' src={`/img/${product.image04}`} className='w-100 h-100 seeproductimg' />
                                 </SwiperSlide>
                             </Swiper>
                         </div>
@@ -168,6 +168,7 @@ const SeeNewProduct = (props) => {
             </Modal>
 
             <Catalog />
+
         </>
     )
 }

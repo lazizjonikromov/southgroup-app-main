@@ -168,7 +168,7 @@ const Catalog = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-12 py-5">
-                            <h2><span>C</span>atalog</h2>
+                            <h2><span>К</span>аталог</h2>
                         </div>
                     </div>
 

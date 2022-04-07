@@ -66,9 +66,6 @@ const Footer = () => {
                                 <a href='https://www.instagram.com/southgroup_uz' target={'_blank'}>
                                     <img style={{ width: '30px', height: '30px' }} src="/img/instagram.png" alt="" />
                                 </a>
-                                <a href='https://www.facebook.com/' target={'_blank'}>
-                                    <img style={{ width: '30px', height: '30px' }} src="/img/facebook.png" alt="" />
-                                </a>
                                 <a href='https://t.me/southgroup_uz' target={'_blank'}>
                                     <img style={{ width: '30px', height: '30px' }} src="/img/telegram.png" alt="" />
                                 </a>
