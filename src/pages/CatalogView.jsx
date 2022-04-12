@@ -70,3 +70,4 @@ const CatalogView = (props) => {
 }
 
 export default CatalogView
+

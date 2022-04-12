@@ -49,7 +49,6 @@ const NewProduct = () => {
                                                 <img src={`../img/${item.image01}`} className="card-img-top w-100" alt="" />
                                                 <div className="card-body">
                                                     <h5 className="card-title">{item.title}</h5>
-                                                    <p className="card-text">{item.price}</p>
                                                 </div>
                                             </Link>
                                         </SwiperSlide>

@@ -36,13 +36,13 @@ const Partners = () => {
                   className="mySwiper"
                 >
                   <SwiperSlide>
-                    <img src="./img/client-01.jpg" alt="" className='w-100'/>
+                    <img src="./img/partners-01.webp" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/client-02.png" alt="" className='w-100'/>
+                    <img src="./img/partners-02.webp" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/client-03.png" alt="" className='w-100'/>
+                    <img src="./img/partners-03.png" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>
                     <img src="./img/client-04.jpg" alt="" className='w-100'/>

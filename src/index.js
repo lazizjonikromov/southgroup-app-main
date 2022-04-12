@@ -43,7 +43,7 @@ ReactDOM.render(
       <Route path="/contacts" exact component={Contacts} />
 
       <Route path="/catalog/:id" exact component={CatalogView} />
-      
+       
 
     </Switch>
 
