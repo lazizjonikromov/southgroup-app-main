@@ -14,6 +14,7 @@ const CatalogView = (props) => {
             .then((res) => {
                 setCategory(res.data.products)
                 setName(res.data.name)
+                console.log(res);
             })
             .catch((err) => {
                 console.log(err);
@@ -54,7 +55,7 @@ const CatalogView = (props) => {
                                         </div>
                                         <div>
                                             <h5>{item.title}</h5>
-                                            <p className='mt-3'>{item.description.substring(0, 40)}...</p>
+                                            {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                         </div>
                                     </Link>
                                 </div>

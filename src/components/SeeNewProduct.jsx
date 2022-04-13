@@ -17,6 +17,7 @@ import { API } from '../tools/constants';
 const SeeNewProduct = (props) => {
     const [product, setProduct] = useState({})
     const [descr, setDescr] = useState([])
+    const [miniDescr, setMiniDescr] = useState([])
     const [loading, setLoading] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
 
@@ -29,6 +30,7 @@ const SeeNewProduct = (props) => {
             .then((res) => {
                 setProduct(res.data)
                 setDescr(res.data.big_description)
+                setMiniDescr(res.data.description)
                 setLoading(false)
             })
             .catch((err) => {
@@ -50,7 +52,7 @@ const SeeNewProduct = (props) => {
                 </div> : ''}
             <div className="seeNewProduct pt-5 mt-5">
                 <div className="container">
-                    
+
                     <div className="row align-items-center">
                         <div className="col-lg-6 d-flex productImages">
                             {/* <img onClick={() => setIsOpen(true)} className='w-100' style={{ cursor: 'pointer', backgroundColor: 'red' }} src={`/img/${product.image}`} alt="" /> */}
@@ -126,8 +128,25 @@ const SeeNewProduct = (props) => {
 
                         <div className="col-lg-6 ml-auto">
                             <h3>{product.title}</h3>
+                            <hr />
+                            <h4 className='mt-3 mb-3'>
+                                ХАРАКТЕРИСТИКИ
+                            </h4>
+                            <hr />
+                            <ul>
+                                {miniDescr?.map((item, index) => {
+                                    return (
+                                        <>
 
-                            <p className="mt-4">{product.description}</p>
+                                            <li key={index + 1}>
+                                                {item}
+                                            </li>
+
+                                            <hr />
+                                        </>
+                                    )
+                                })}
+                            </ul>
 
                         </div>
                     </div>

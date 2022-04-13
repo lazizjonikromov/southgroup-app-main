@@ -205,7 +205,7 @@ const Catalog = () => {
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
-                                                            <p className='mt-3'>{item.description.substring(0, 40)}...</p>
+                                                            {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                         </div>
                                                     </Link>
                                                 </div>
@@ -224,7 +224,7 @@ const Catalog = () => {
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
-                                                            <p className='mt-3'>{item.description.substring(0, 40)}...</p>
+                                                            {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                         </div>
                                                     </Link>
                                                 </div>
@@ -244,7 +244,7 @@ const Catalog = () => {
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
-                                                            <p className='mt-3'>{item.description.substring(0, 40)}...</p>
+                                                            {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                         </div>
                                                     </Link>
                                                 </div>
@@ -264,7 +264,7 @@ const Catalog = () => {
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
-                                                            <p className='mt-3'>{item.description.substring(0, 40)}...</p>
+                                                            {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                         </div>
                                                     </Link>
                                                 </div>
@@ -284,7 +284,7 @@ const Catalog = () => {
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
-                                                            <p className='mt-3'>{item.description.substring(0, 40)}...</p>
+                                                            {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                         </div>
                                                     </Link>
                                                 </div>
@@ -304,7 +304,7 @@ const Catalog = () => {
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
-                                                            <p className='mt-3'>{item.description.substring(0, 40)}...</p>
+                                                            {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                         </div>
                                                     </Link>
                                                 </div>

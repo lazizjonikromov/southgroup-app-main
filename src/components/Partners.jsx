@@ -25,7 +25,7 @@ const Partners = () => {
             <div className="container">
               <div className="row">
                 <Swiper
-                  slidesPerView={4}
+                  slidesPerView={3}
                   spaceBetween={30}
                   loop={true}
                   autoplay={{
@@ -36,25 +36,34 @@ const Partners = () => {
                   className="mySwiper"
                 >
                   <SwiperSlide>
-                    <img src="./img/partners-01.webp" alt="" className='w-100'/>
+                    <img src="./img/partners-01.svg" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-02.webp" alt="" className='w-100'/>
+                    <img src="./img/partners-02.svg" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-03.png" alt="" className='w-100'/>
+                    <img src="./img/partners-03.jpg" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/client-04.jpg" alt="" className='w-100'/>
+                    <img src="./img/partners-04.png" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/client-05.png" alt="" className='w-100'/>
+                    <img src="./img/partners-05.png" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/client-06.png" alt="" className='w-100'/>
+                    <img src="./img/partners-06.jpg" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/client-07.png" alt="" className='w-100'/>
+                    <img src="./img/partners-07.png" alt="" className='w-100'/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src="./img/partners-08.png" alt="" className='w-100'/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src="./img/partners-09.jpg" alt="" className='w-100'/>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src="./img/partners-10.svg" alt="" className='w-100'/>
                   </SwiperSlide>
                 </Swiper>
               </div>
@@ -69,3 +78,4 @@ const Partners = () => {
 }
 
 export default Partners
+
