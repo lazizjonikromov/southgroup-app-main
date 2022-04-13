@@ -795,7 +795,7 @@ body {
         .brend-partners {
             margin-top: 150px;
 
-            img{
+            img {
                 width: 100px;
                 height: 100px;
             }
@@ -1017,6 +1017,12 @@ body {
 
     .seeNewProduct {
 
+        .line {
+            border-bottom: 1px solid rgba(192, 192, 192, 0.479);
+            width: 100%;
+            margin: 19px 0;
+        }
+
         .swiper-slide {
             cursor: pointer;
         }
@@ -1056,6 +1062,11 @@ body {
 
         }
 
+        .xr {
+            span {
+                color: $org;
+            }
+        }
 
 
 

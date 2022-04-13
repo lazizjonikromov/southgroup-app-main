@@ -17,7 +17,8 @@ import { API } from '../tools/constants';
 const SeeNewProduct = (props) => {
     const [product, setProduct] = useState({})
     const [descr, setDescr] = useState([])
-    const [miniDescr, setMiniDescr] = useState([])
+    const [description_key, setDescription_key] = useState([])
+    const [description_value, setDescription_value] = useState([])
     const [loading, setLoading] = useState(false)
     const [isOpen, setIsOpen] = useState(false)
 
@@ -30,7 +31,8 @@ const SeeNewProduct = (props) => {
             .then((res) => {
                 setProduct(res.data)
                 setDescr(res.data.big_description)
-                setMiniDescr(res.data.description)
+                setDescription_key(res.data.description_key)
+                setDescription_value(res.data.description_value)
                 setLoading(false)
             })
             .catch((err) => {
@@ -43,6 +45,9 @@ const SeeNewProduct = (props) => {
 
     useEffect(() => {
         getNewProduct()
+        setTimeout(() => {
+            console.clear()
+        }, 1000)
     }, [])
     return (
         <>
@@ -128,13 +133,45 @@ const SeeNewProduct = (props) => {
 
                         <div className="col-lg-6 ml-auto">
                             <h3>{product.title}</h3>
-                            <hr />
-                            <h4 className='mt-3 mb-3'>
-                                ХАРАКТЕРИСТИКИ
+                            <br />
+                            <h4 className='mt-3 mb-3 xr'>
+                                <span>Х</span>АРАКТЕРИСТИКИ
                             </h4>
-                            <hr />
-                            <ul>
-                                {miniDescr?.map((item, index) => {
+                            <br />
+                            <table>
+                                <tbody className='d-flex justify-content-between'>
+                                    <tr className='d-flex flex-column'>
+                                        {description_key?.map((item, index) => {
+                                            return (
+                                                <>
+
+                                                    <td key={item.id}>
+                                                        {item}
+                                                    </td>
+
+                                                    <div className='line'></div>
+                                                </>
+                                            )
+                                        })}
+                                    </tr>
+                                    <tr className='d-flex flex-column align-items-end'>
+                                        {description_value?.map((item, index) => {
+                                            return (
+                                                <>
+
+                                                    <td key={item.id}>
+                                                        {item}
+                                                    </td>
+
+                                                    <div className="line"></div>
+                                                </>
+                                            )
+                                        })}
+                                    </tr>
+                                </tbody>
+                            </table>
+                            {/* <ul>
+                                {description_key?.map((item, index) => {
                                     return (
                                         <>
 
@@ -146,7 +183,19 @@ const SeeNewProduct = (props) => {
                                         </>
                                     )
                                 })}
-                            </ul>
+                                {description_value?.map((item, index) => {
+                                    return (
+                                        <>
+
+                                            <li key={index + 1}>
+                                                {item}
+                                            </li>
+
+                                            <hr />
+                                        </>
+                                    )
+                                })}
+                            </ul> */}
 
                         </div>
                     </div>
@@ -163,7 +212,8 @@ const SeeNewProduct = (props) => {
                                 {descr?.map((item, index) => {
                                     return (
                                         <>
-                                            <h5 key={index + 1}>{item}</h5>
+
+                                            <h5 key={item.id}>{item}</h5>
 
 
                                         </>
