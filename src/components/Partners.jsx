@@ -48,9 +48,6 @@ const Partners = () => {
                     <img src="./img/partners-04.png" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-05.png" alt="" className='w-100'/>
-                  </SwiperSlide>
-                  <SwiperSlide>
                     <img src="./img/partners-06.jpg" alt="" className='w-100'/>
                   </SwiperSlide>
                   <SwiperSlide>

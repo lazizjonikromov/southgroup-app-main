@@ -23,6 +23,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import Services from "./components/Services";
 import Contacts from "./components/Contacts";
 import CatalogView from "./pages/CatalogView";
+import Up from "./components/Up";
+import Phone from "./components/Phone";
 
 ReactDOM.render(
   <Router>
@@ -48,6 +50,9 @@ ReactDOM.render(
     </Switch>
 
     <Footer />
+    <Up />
+    <Phone />
+
   </Router>,
   document.getElementById("root")
 );
