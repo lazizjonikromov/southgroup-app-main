@@ -25,6 +25,16 @@ const Partners = () => {
             <div className="container">
               <div className="row">
                 <Swiper
+                  breakpoints={{
+                    338: {
+                      // width: 540,
+                      slidesPerView: 2,
+                    },
+                    992: {
+                      // width: 768,
+                      slidesPerView: 3,
+                    },
+                  }}
                   slidesPerView={3}
                   spaceBetween={30}
                   loop={true}
@@ -36,31 +46,31 @@ const Partners = () => {
                   className="mySwiper"
                 >
                   <SwiperSlide>
-                    <img src="./img/partners-01.svg" alt="" className='w-100'/>
+                    <img src="./img/partners-01.svg" alt="" className='w-100' />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-02.svg" alt="" className='w-100'/>
+                    <img src="./img/partners-02.svg" alt="" className='w-100' />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-03.jpg" alt="" className='w-100'/>
+                    <img src="./img/partners-03.jpg" alt="" className='w-100' />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-04.png" alt="" className='w-100'/>
+                    <img src="./img/partners-04.png" alt="" className='w-100' />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-06.jpg" alt="" className='w-100'/>
+                    <img src="./img/partners-06.jpg" alt="" className='w-100' />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-07.png" alt="" className='w-100'/>
+                    <img src="./img/partners-07.png" alt="" className='w-100' />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-08.png" alt="" className='w-100'/>
+                    <img src="./img/partners-08.png" alt="" className='w-100' />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-09.jpg" alt="" className='w-100'/>
+                    <img src="./img/partners-09.jpg" alt="" className='w-100' />
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src="./img/partners-10.svg" alt="" className='w-100'/>
+                    <img src="./img/partners-10.svg" alt="" className='w-100' />
                   </SwiperSlide>
                 </Swiper>
               </div>

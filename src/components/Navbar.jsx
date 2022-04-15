@@ -8,7 +8,9 @@ import { API } from '../tools/constants';
 
 const Navbar = () => {
 
-    const [myTabs, setMyTabs] = useState(false)
+    const [burger, setBurger] = useState(false);
+
+    const [myTabs, setMyTabs] = useState(false);
     const [activeTab, setActiveTab] = useState('1');
     const [navbar, setNavbar] = useState(false);
     const [categories, setCategories] = useState([])
@@ -39,7 +41,7 @@ const Navbar = () => {
             })
 
     }
-    
+
 
     const changeNavbar = () => {
         if (window.scrollY >= 30) {
@@ -60,38 +62,59 @@ const Navbar = () => {
     return (
         <>
 
-            <div className={`navBar ${navbar ? 'active' : null}`}>
+            <div className={`navBar ${navbar ? 'active' : ''}`}>
                 <div className="container">
                     <div className="row">
                         <div className="nav-01 col-12">
-                            <ul className="d-flex justify-content-between align-items-center">
-                                <li>
-                                    <Link to='/catalog'
-                                        onClick={() => setMyTabs(false)}
-                                        className={`katalog ${location.pathname === '/catalog' ? 'active' : ''}`}
-                                        onMouseEnter={() => {
-                                            setMyTabs(true)
-                                        }}
-                                        id="katalog"
-                                    >
-                                        Каталог
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link className={`${location.pathname === '/services' ? 'active' : ''}`} onClick={() => setMyTabs(false)} to='/services'> Услуги </Link>
-                                </li>
-                                <li>
+                            {/* Burger */}
+
+                            <div className="mob-nav d-flex align-items-center">
+                                <div className="col-lg-1 col-4 m-0 d-md-block d-lg-none">
                                     <Link onClick={() => setMyTabs(false)} to='/'>
                                         <img src="/img/logo.png" style={{ width: '180px' }} alt="" />
                                     </Link>
-                                </li>
-                                <li>
-                                    <Link className={`${location.pathname === '/about' ? 'active' : ''}`} onClick={() => setMyTabs(false)} to='/about'> О компании </Link>
-                                </li>
-                                <li>
-                                    <Link className={`${location.pathname === '/contacts' ? 'active' : ''}`} onClick={() => setMyTabs(false)} to='/contacts'> Контакты </Link>
-                                </li>
-                            </ul>
+                                </div>
+
+                                <div onClick={() => setBurger(!burger)} class={`burger pr-4 ml-auto d-flex d-lg-none ${burger ? 'burgered' : ''}`}>
+                                    <div class="burger1"></div>
+                                    <div class="burger2"></div>
+                                    <div class="burger3"></div>
+                                </div>
+                            </div>
+
+                            <div className={`col-lg-12 nimadur ${burger ? '' : 'burgered'}`}>
+                                <ul className={`d-flex justify-content-between align-items-center`}>
+                                    <li className='d-md-block d-lg-none'>
+                                        <Link className={`${location.pathname === '/' ? 'active' : ''}`} onClick={() => setBurger(false)}  to='/'> Главная </Link>
+                                    </li>
+                                    <li>
+                                        <Link to='/catalog'
+                                            onClick={() => setBurger(false)} 
+                                            className={`katalog ${location.pathname === '/catalog' ? 'active' : ''}`}
+                                            onMouseEnter={() => {
+                                                setMyTabs(true)
+                                            }} 
+                                            id="katalog"
+                                        >
+                                            Каталог
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className={`${location.pathname === '/services' ? 'active' : ''}`} onClick={() => setBurger(false)}  to='/services'> Услуги </Link>
+                                    </li>
+                                    <li className='d-none d-lg-block'>
+                                        <Link onClick={() => setBurger(false)}  to='/'>
+                                            <img src="/img/logo.png" style={{ width: '180px' }} alt="" />
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className={`${location.pathname === '/about' ? 'active' : ''}`} onClick={() => setBurger(false)}  to='/about'> О компании </Link>
+                                    </li>
+                                    <li>
+                                        <Link className={`${location.pathname === '/contacts' ? 'active' : ''}`} onClick={() => setBurger(false)}  to='/contacts'> Контакты </Link>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -100,7 +123,7 @@ const Navbar = () => {
             <div className="navbarLine"></div>
 
 
-            <div onMouseLeave={() => setMyTabs(false)} className={`myTab ${myTabs ? 'active' : ''} ${navbar ? 'actived' : null}`}>
+            <div onMouseLeave={() => setMyTabs(false)} className={`myTab d-none d-lg-block ${myTabs ? 'active' : ''} ${navbar ? 'actived' : null}`}>
                 <div onClick={() => setMyTabs(false)} className="closes">x</div>
                 <div className="container">
                     <div className="row">

@@ -9,7 +9,7 @@ import { API } from "../tools/constants";
 const NewProduct = () => {
     const [product, setProduct] = useState([])
     const getNewProduct = () => {
-        axios.get( API + 'api/product')
+        axios.get(API + 'api/product')
             .then((res) => {
                 setProduct(res.data)
             })
@@ -17,7 +17,7 @@ const NewProduct = () => {
                 console.log(err);
             })
     }
-    
+
     useEffect(() => {
         getNewProduct()
     }, [])
@@ -27,34 +27,44 @@ const NewProduct = () => {
             <div className="newProduct">
                 <div className="container">
                     <div className="row">
-                            <h2><span>П</span>родукты</h2>
-                            <Swiper
-                                slidesPerView={3.5}
-                                spaceBetween={30}
-                                loop={true}
-                                autoplay={{
-                                    delay: 2000,
-                                    disableOnInteraction: false,
-                                }}
-                                pagination={{
-                                    clickable: true,
-                                }}
-                                modules={[Autoplay, Pagination]}
-                                className="mySwiper mt-5"
-                            >
-                                {product.map((item, index) => {
-                                    return (
-                                        <SwiperSlide key={index}>
-                                            <Link to={`/new-catalog/${item.id}`} className="card h-100">
-                                                <img src={`../img/${item.image01}`} className="card-img-top w-100" alt="" />
-                                                <div className="card-body">
-                                                    <h5 className="card-title">{item.title}</h5>
-                                                </div>
-                                            </Link>
-                                        </SwiperSlide>
-                                    )
-                                })}
-                            </Swiper>
+                        <h2><span>П</span>родукты</h2>
+                        <Swiper
+                            breakpoints={{
+                                338: {
+                                    // width: 540,
+                                    slidesPerView: 1.4,
+                                },
+                                992: {
+                                    // width: 768,
+                                    slidesPerView: 3.5,
+                                },
+                            }}
+                            slidesPerView={3.5}
+                            spaceBetween={30}
+                            loop={true}
+                            autoplay={{
+                                delay: 2000,
+                                disableOnInteraction: false,
+                            }}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Autoplay, Pagination]}
+                            className="mySwiper mt-5"
+                        >
+                            {product.map((item, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <Link to={`/new-catalog/${item.id}`} className="card h-100">
+                                            <img src={`../img/${item.image01}`} className="card-img-top w-100" alt="" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">{item.title}</h5>
+                                            </div>
+                                        </Link>
+                                    </SwiperSlide>
+                                )
+                            })}
+                        </Swiper>
                     </div>
                 </div>
             </div>

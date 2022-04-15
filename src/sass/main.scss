@@ -7,6 +7,10 @@ $white: #fff;
 
 @import url('https://fonts.googleapis.com/css2?family=Hubballi&family=Montserrat:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap');
 
+#root {
+    overflow-x: hidden;
+}
+
 html {
     width: 100%;
     overflow-x: hidden;
@@ -200,6 +204,138 @@ body {
         transition: all .8s ease-in-out;
         box-shadow: 0 0 10px silver;
 
+        @media(max-width:992px) {
+            padding: 10px;
+            z-index: 99999999;
+
+            .nimadur {
+                z-index: 9999;
+
+                ul {
+                    li {
+                        transition: all .3s ease-in-out;
+
+                        a {
+                            color: $white;
+                            font-weight: 600;
+                            transition: all .3s ease-in-out;
+                            font-size: 30px;
+
+                            &:hover {
+                                color: $org;
+                            }
+
+                            &.active {
+                                border-bottom: 2px solid $org;
+                                padding-bottom: 7px;
+                                border-radius: 2px;
+                                color: $org;
+                            }
+
+                            // @media(max-width:1140px) {
+                            //     // font-size: 13px;
+                            // }
+                        }
+
+
+                        @media (max-width:992px) {
+                            margin-bottom: 30px;
+                            font-size: 18px;
+                        }
+                    }
+
+                    @media (max-width:992px) {
+                        flex-direction: column;
+                    }
+
+
+                }
+
+                @media(max-width: 992px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100vh;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    background-color: #000000e6;
+                    backdrop-filter: blur(50px) !important;
+                    transition: all .5s ease-in-out;
+                }
+
+                &.burgered {
+
+                    @media(max-width: 992px) {
+                        opacity: 0;
+                        transform: translateX(100%);
+
+                        &.active {
+                            transform: translateX(0);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            .burger {
+                position: relative;
+                width: 30px;
+                height: 30px;
+                margin-right: 25px;
+                transition: all .5s ease-in-out;
+                z-index: 10000;
+                display: none;
+                margin-left: auto;
+                padding-right: 40px;
+
+                .burger1,
+                .burger2,
+                .burger3 {
+                    position: absolute;
+                    width: 30px;
+                    height: 2px;
+                    background-color: #d6171f;
+                    border-radius: 20px;
+                    transition: all .5s ease-in-out;
+                }
+
+                .burger1 {
+                    top: 0;
+                }
+
+                .burger2 {
+                    top: 9px;
+                    transition: all .3s ease-in-out;
+                }
+
+                .burger3 {
+                    top: 18px;
+                }
+
+                &.burgered {
+
+                    .burger1 {
+                        transform: translateY(10px) rotate(45deg);
+                    }
+
+                    .burger2 {
+                        opacity: 0;
+                    }
+
+                    .burger3 {
+                        transform: translateY(-8px) rotate(-45deg);
+                        // width: 50%;
+                    }
+                }
+            }
+        }
+
+
+
+
         a,
         img,
         p {
@@ -215,7 +351,7 @@ body {
                 transition: all .3s ease-in-out;
 
                 &.active {
-                    border-bottom: 2px solid red;
+                    border-bottom: 2px solid $org;
                     padding-bottom: 7px;
                     border-radius: 2px;
                     color: $org;
@@ -264,6 +400,10 @@ body {
 
     .navbarLine {
         padding-top: 148px;
+
+        @media (max-width:992px) {
+            padding-top: 118px;
+        }
     }
 
     .myTab {
@@ -276,6 +416,7 @@ body {
         backdrop-filter: blur(30px);
         background-color: #ffffffb6;
         box-shadow: 0 0 10px rgb(126, 123, 123);
+
 
 
         .closes {
@@ -393,6 +534,10 @@ body {
             color: $dark;
             padding: 0;
             z-index: 99999;
+
+            @media(max-width:992px) {
+                z-index: 99;
+            }
         }
 
         .swiper {
@@ -458,6 +603,10 @@ body {
             object-fit: cover;
         }
 
+        @media(max-width:992px) {
+            z-index: 99;
+        }
+
     }
 
     .pop-categories {
@@ -510,7 +659,7 @@ body {
     }
 
     .newProduct {
-        padding: 100px 0;
+        padding: 100px 15px;
 
         h2 {
             font-weight: 600;
@@ -586,7 +735,6 @@ body {
         }
 
         .history-01 {
-            margin-top: 100px;
 
             .left {
                 background-color: $darklight;
@@ -614,8 +762,16 @@ body {
                 background-color: $darklight;
                 position: relative;
 
+                @media (max-width:992px) {
+                    padding: 20px;
+                }
+
                 h1 {
                     padding-top: 40px;
+
+                    @media (max-width:992px) {
+                        padding-top: 0px;
+                    }
 
                     span {
                         color: $org;
@@ -633,6 +789,12 @@ body {
                     color: $white;
                     bottom: 400px;
                     left: 500px;
+
+                    @media (max-width:992px) {
+                        padding: 30px 60px;
+                        bottom: 600px;
+                        left: 335px;
+                    }
                 }
 
                 .myBtn {
@@ -707,6 +869,10 @@ body {
                     z-index: -1;
                     left: 350px;
                 }
+
+                @media (max-width:992px) {
+                    margin-top: -10px;
+                }
             }
 
             .right {
@@ -714,9 +880,20 @@ body {
                 z-index: -2;
                 left: 400px;
 
+                @media (max-width:992px) {
+                    left: 0;
+                }
+
                 img {
                     width: 148%;
                     height: 600px;
+
+                    @media (max-width:992px) {
+                        margin-top: 200px;
+                        width: 100%;
+                        height: 400px;
+                        padding: 0;
+                    }
                 }
             }
         }
@@ -1002,6 +1179,10 @@ body {
         }
 
         .map {
+            @media (max-width:992px) {
+                margin-top: 70px;
+            }
+
             iframe {
                 border: none;
                 border-radius: 20px;
@@ -1118,45 +1299,50 @@ body {
     .phoneWrap {
         position: relative;
 
+
         &::after {
             content: '';
             position: fixed;
-            width: 70px;
-            height: 70px;
+            width: 50px;
+            height: 50px;
             background-color: rgba(255, 0, 0, 0.5);
             -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
-            bottom: 70px;
-            left: 50px;
+            bottom: 50px;
+            left: 25px;
             border-radius: 50%;
             animation: anim1 3s linear infinite reverse;
             z-index: 998;
 
-            @media(max-width: 676px) {
-                right: 25px;
+            @media(max-width: 1640px) {
+                right: 20px;
                 bottom: 30px;
                 width: 60px;
                 height: 60px;
             }
         }
 
+        img {
+            width: 20px;
+        }
+
         a {
-            width: 70px;
-            height: 70px;
+            width: 50px;
+            height: 50px;
             background: $org;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 50%;
             position: fixed;
-            bottom: 70px;
-            left: 50px;
+            bottom: 50px;
+            left: 25px;
             z-index: 999;
             animation: anim2 2s ease-in-out infinite;
 
 
-            @media(max-width: 676px) {
-                right: 25px;
+            @media(max-width: 1640px) {
+                right: 20px;
                 bottom: 30px;
                 width: 60px;
                 height: 60px;
@@ -1174,7 +1360,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
-        bottom: 70px;
+        bottom: 50px;
         // left: 7.5vh;
         right: 40px;
         background: $org;
