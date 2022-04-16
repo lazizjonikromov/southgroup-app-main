@@ -736,6 +736,10 @@ body {
 
         .history-01 {
 
+            @media (max-width:992px) {
+                margin-top: 30px;
+            }
+
             .left {
                 background-color: $darklight;
                 padding: 0 10px 10px;
@@ -753,6 +757,10 @@ body {
                     background-color: $org;
                     position: absolute;
                     z-index: -1;
+
+                    @media (max-width:1140px) {
+                        display: none;
+                    }
                 }
             }
 
@@ -790,10 +798,8 @@ body {
                     bottom: 400px;
                     left: 500px;
 
-                    @media (max-width:992px) {
-                        padding: 30px 60px;
-                        bottom: 600px;
-                        left: 335px;
+                    @media (max-width:1140px) {
+                        display: none;
                     }
                 }
 
@@ -840,11 +846,11 @@ body {
         .history-02 {
             margin-top: 100px;
 
+
             .left {
                 padding: 40px;
                 background-color: $darklight;
                 color: $white;
-                height: 220px;
                 margin-top: 80px;
                 position: absolute;
 
@@ -860,6 +866,10 @@ body {
                     background-color: $org;
                     position: absolute;
                     z-index: -1;
+
+                    @media (max-width:992px) {
+                        display: none;
+                    }
                 }
 
                 span {
@@ -868,6 +878,11 @@ body {
                     position: absolute;
                     z-index: -1;
                     left: 350px;
+                }
+
+
+                @media (max-width:1400px) {
+                    padding: 10px;
                 }
 
                 @media (max-width:992px) {
@@ -889,13 +904,15 @@ body {
                     height: 600px;
 
                     @media (max-width:992px) {
-                        margin-top: 200px;
+                        margin-top: 440px;
                         width: 100%;
-                        height: 400px;
+                        height: 220px;
                         padding: 0;
                     }
                 }
             }
+
+
         }
     }
 
@@ -931,6 +948,10 @@ body {
             margin-top: 50px;
             padding: 20px 10px 20px 20px;
 
+            @media (max-width:992px) {
+                padding: 15px 0;
+            }
+
             .left {
                 background-color: $darklight;
                 color: $white;
@@ -947,6 +968,11 @@ body {
                     width: 140%;
                     position: relative;
                     z-index: 1;
+
+                    @media (max-width:992px) {
+                        width: 100%;
+                        margin-top: 30px;
+                    }
                 }
 
                 .top-span {
@@ -956,6 +982,10 @@ body {
                     bottom: 480px;
                     right: 520px;
                     z-index: 0;
+
+                    @media (max-width:1440px) {
+                        display: none;
+                    }
                 }
 
                 .bot-span {
@@ -965,6 +995,10 @@ body {
                     bottom: -40px;
                     right: -260px;
                     z-index: 0;
+
+                    @media (max-width:992px) {
+                        display: none;
+                    }
                 }
             }
         }
@@ -1000,6 +1034,10 @@ body {
         padding: 100px 0 20px 0;
         background: $darklight;
         color: $white;
+
+        @media (max-width:992px) {
+            text-align: center;
+        }
 
         .myBtn {
             padding: 10px 30px;
@@ -1132,7 +1170,7 @@ body {
     }
 
     .services {
-        margin-top: 50px;
+        margin: 50px 15px;
 
         h2 {
             font-weight: 600;

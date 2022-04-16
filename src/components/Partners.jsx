@@ -9,18 +9,18 @@ const Partners = () => {
         <div className="container">
           <h2><span>Н</span>аши партнеры</h2>
           <div className="row partner d-flex align-items-center">
-            <div className="col-5 left">
+            <div className="col-lg-5 left">
               <h5>Компании сотрудничают с нами по всему миру</h5>
               <p>На данный момент дилерская сеть фабрики «Экми-Мебель» насчитывает более 30 салонов по всей Украине. Сейчас мы заинтересованы  в расширении сети и предлагаем выгодные условия для сотрудничества.
                 <br /><br />                Основным преимуществом фабрики является изготовление любого индивидуального изделия, мягкой мебели и аксессуаров из наших основных коллекций. Также присутствует линейка оригинальных интерьерных корпусных изделий.</p>
             </div>
-            <div className="col-5 right">
+            <div className="col-lg-5 right">
               <div className='top-span'></div>
-              <img src="./img/nivelir-header-03.webp" alt="" />
+              <img src="./img/nivelir-header-03.webp" alt=""/>
               <div className='bot-span'></div>
             </div>
           </div>
-
+          
           <div className="brend-partners">
             <div className="container">
               <div className="row">
