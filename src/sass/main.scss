@@ -628,6 +628,7 @@ body {
             }
 
             img {
+                object-fit: contain;
                 transition: all .4s ease;
             }
 
@@ -769,6 +770,7 @@ body {
                 color: $white;
                 background-color: $darklight;
                 position: relative;
+                padding-top: 100px;
 
                 @media (max-width:992px) {
                     padding: 20px;
@@ -1057,8 +1059,8 @@ body {
                 border-color: transparent;
 
                 span {
-                    width: 700px;
-                    height: 700px;
+                    width: 900px;
+                    height: 900px;
                 }
             }
 

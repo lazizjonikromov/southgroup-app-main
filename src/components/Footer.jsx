@@ -60,7 +60,7 @@ const Footer = () => {
                                 )
                             })}
                         </div>
-                        <div className="col-lg-3 col-md-12 d-flex flex-column connect-footer">
+                        <div className="col-lg-3 col-md-6 d-flex flex-column connect-footer">
                             <h2>Связаться с нами</h2>
                             <div className="icon-footer">
                                 <a href='https://www.instagram.com/southgroup_uz' target={'_blank'}>
