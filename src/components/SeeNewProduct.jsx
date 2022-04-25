@@ -69,7 +69,7 @@ const SeeNewProduct = (props) => {
                                 className="mySwiper2 w-75"
                             >
                                 <SwiperSlide>
-
+  
                                     <a
                                         href={`/img/${product.image01}`}
                                         data-fancybox="gallery"
