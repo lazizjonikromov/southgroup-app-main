@@ -75,10 +75,10 @@ const Navbar = () => {
                                     </Link>
                                 </div>
 
-                                <div onClick={() => setBurger(!burger)} class={`burger pr-4 ml-auto d-flex d-lg-none ${burger ? 'burgered' : ''}`}>
-                                    <div class="burger1"></div>
-                                    <div class="burger2"></div>
-                                    <div class="burger3"></div>
+                                <div onClick={() => setBurger(!burger)} className={`burger pr-4 ml-auto d-flex d-lg-none ${burger ? 'burgered' : ''}`}>
+                                    <div className="burger1"></div>
+                                    <div className="burger2"></div>
+                                    <div className="burger3"></div>
                                 </div>
                             </div>
 

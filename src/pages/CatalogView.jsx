@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import HashLoader from "react-spinners/HashLoader";
+import { ScaleLoader } from 'react-spinners';
 import { API } from '../tools/constants';
 
 const CatalogView = (props) => {
@@ -35,14 +35,20 @@ const CatalogView = (props) => {
         <>
             {loading ?
                 <div className="loader">
-                    <HashLoader loading={loading} size="40" color="red" />
+                    <img src="/img/logo.png" alt="" />
+                    <ScaleLoader
+                        className="loader"
+                        loading={loading}
+                        size="70"
+                        color="#d6171f"
+                    />
                 </div> : ''}
 
             <div className="catalog-products">
                 <div className="container">
                     <div className="row">
                         <div className="col-12 mt-5">
-                            <h2><span>{name.substring(0,1)}</span>{name.substring(1)}</h2>
+                            <h2><span>{name.substring(0, 1)}</span>{name.substring(1)}</h2>
                         </div>
                     </div>
                     <div className="row">

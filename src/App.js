@@ -6,23 +6,31 @@ import NewProduct from "./components/NewProduct";
 import LastProduct from "./components/LastProduct";
 import Number from "./components/Number";
 import Partners from "./components/Partners";
-import HashLoader from "react-spinners/HashLoader";
 import Contacts from "./components/Contacts";
+import { ScaleLoader } from "react-spinners";
 
 const App = () => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false)
-    }, 
-    1000)
-  }, [])
+      setLoading(false);
+    }, 1000);
+  }, []);
   return (
     <>
-    {loading ? 
-      <div className="loader">
-        <HashLoader className='loader' loading={loading} size="40" color="red" />
-      </div> : ''}
+      {loading ? (
+        <div className="loader">
+          <img src="/img/logo.png" alt="" />
+          <ScaleLoader
+            className="loader"
+            loading={loading}
+            size="70"
+            color="#d6171f"
+          />
+        </div>
+      ) : (
+        ""
+      )}
       <Header />
       <Catalog />
       <NewProduct />

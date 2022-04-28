@@ -1,6 +1,5 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-import HashLoader from "react-spinners/HashLoader";
 import { Modal, ModalBody } from 'reactstrap'
 import Catalog from './Catalog';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -13,6 +12,7 @@ import "swiper/css/thumbs";
 
 import { FreeMode, Navigation, Thumbs } from "swiper";
 import { API } from '../tools/constants';
+import { ScaleLoader } from 'react-spinners';
 
 const SeeNewProduct = (props) => {
     const [product, setProduct] = useState({})
@@ -30,6 +30,7 @@ const SeeNewProduct = (props) => {
         axios.get(API + `api/product/${props.match.params.id}`)
             .then((res) => {
                 setProduct(res.data)
+                console.log(product);
                 setDescr(res.data.big_description)
                 setDescription_key(res.data.description_key)
                 setDescription_value(res.data.description_value)
@@ -53,7 +54,13 @@ const SeeNewProduct = (props) => {
         <>
             {loading ?
                 <div className="loader">
-                    <HashLoader loading={loading} size="40" color="red" />
+                    <img src="/img/logo.png" alt="" />
+                    <ScaleLoader
+                        className="loader"
+                        loading={loading}
+                        size="70"
+                        color="#d6171f"
+                    />
                 </div> : ''}
             <div className="seeNewProduct pt-5 mt-5">
                 <div className="container">
@@ -69,7 +76,7 @@ const SeeNewProduct = (props) => {
                                 className="mySwiper2 w-75"
                             >
                                 <SwiperSlide>
-  
+
                                     <a
                                         href={`/img/${product.image01}`}
                                         data-fancybox="gallery"
@@ -146,10 +153,10 @@ const SeeNewProduct = (props) => {
                                                 <>
 
                                                     <td key={item.id}>
-                                                        {item}
+                                                        {item} 
                                                     </td>
 
-                                                    <div className='line'></div>
+                                                    <br />
                                                 </>
                                             )
                                         })}
@@ -163,13 +170,47 @@ const SeeNewProduct = (props) => {
                                                         {item}
                                                     </td>
 
-                                                    <div className="line"></div>
+                                                    <br />
                                                 </>
                                             )
                                         })}
                                     </tr>
                                 </tbody>
                             </table>
+                            
+                            <table>
+                                <tbody className='d-flex justify-content-between'>
+                                    <tr className='d-flex flex-column'>
+                                        {description_key?.map((item, index) => {
+                                            return (
+                                                <>
+
+                                                    <td key={item.id}>
+                                                        {item} 
+                                                    </td>
+
+                                                    <br />
+                                                </>
+                                            )
+                                        })}
+                                    </tr>
+                                    <tr className='d-flex flex-column align-items-end'>
+                                        {description_value?.map((item, index) => {
+                                            return (
+                                                <>
+
+                                                    <td key={item.id}>
+                                                        {item}
+                                                    </td>
+
+                                                    <br />
+                                                </>
+                                            )
+                                        })}
+                                    </tr>
+                                </tbody>
+                            </table>
+                            
                             {/* <ul>
                                 {description_key?.map((item, index) => {
                                     return (

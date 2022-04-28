@@ -37,7 +37,6 @@ export default function App() {
                             <Swiper
                                 effect={"cube"}
                                 grabCursor={true}
-                                loop={true}
                                 speed={2000}
                                 cubeEffect={{
                                     centeredSlides: true,

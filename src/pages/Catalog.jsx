@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react'
 import { TabContent, TabPane, Nav, NavItem, NavLink, Row } from 'reactstrap';
 import classnames from 'classnames';
 import { Link } from 'react-router-dom'
-import HashLoader from "react-spinners/HashLoader";
 import Partners from '../components/Partners';
 import { API } from '../tools/constants';
+import { ScaleLoader } from 'react-spinners';
 
 const Catalog = () => {
     const [category, setCategory] = useState([])
@@ -81,9 +81,9 @@ const Catalog = () => {
     }
 
     const getNivelir = async () => {
-        await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/nivelir')
+        await axios.get(API + 'api/category/3')
             .then((res) => {
-                setNivelir(res.data.nivelir)
+                setNivelir(res.data.products)
             })
             .catch((err) => {
                 console.log(err);
@@ -91,9 +91,9 @@ const Catalog = () => {
     }
 
     const getLazerniy = async () => {
-        await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/lazerniy')
+        await axios.get(API + 'api/category/4')
             .then((res) => {
-                setLazerniy(res.data.lazerniy)
+                setLazerniy(res.data.products)
             })
             .catch((err) => {
                 console.log(err);
@@ -101,9 +101,9 @@ const Catalog = () => {
     }
 
     const getTeo = async () => {
-        await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/teodolit')
+        await axios.get(API + 'api/category/5')
             .then((res) => {
-                setTeodolit(res.data.teodolit)
+                setTeodolit(res.data.products)
             })
             .catch((err) => {
                 console.log(err);
@@ -111,9 +111,9 @@ const Catalog = () => {
     }
 
     const getTrass = async () => {
-        await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/trassoiskatel')
+        await axios.get(API + 'api/category/6')
             .then((res) => {
-                setTrassoiskatel(res.data.trassoiskatel)
+                setTrassoiskatel(res.data.products)
             })
             .catch((err) => {
                 console.log(err);
@@ -121,9 +121,9 @@ const Catalog = () => {
     }
 
     const getAcs = async () => {
-        await axios.get('https://laravelcrudtutorial.000webhostapp.com/api/acsessuary')
+        await axios.get(API + 'api/category/7')
             .then((res) => {
-                setAcsessuary(res.data.acsessuary)
+                setAcsessuary(res.data.products)
             })
             .catch((err) => {
                 console.log(err);
@@ -136,13 +136,11 @@ const Catalog = () => {
         getId()
         getAll()
         getAllCategory()
-        
+
         getCategory()
 
         getTaxeometr()
-
         getGnss()
-
         getNivelir()
         getLazerniy()
         getTeo()
@@ -162,7 +160,13 @@ const Catalog = () => {
         <>
             {loading ?
                 <div className="loader">
-                    <HashLoader loading={loading} size="40" color="red" />
+                    <img src="/img/logo.png" alt="" />
+                    <ScaleLoader
+                        className="loader"
+                        loading={loading}
+                        size="70"
+                        color="#d6171f"
+                    />
                 </div> : ''}
             <div className="catalog-page">
                 <div className="container">
@@ -194,6 +198,7 @@ const Catalog = () => {
 
                         <div className="col-lg-9">
                             <TabContent activeTab={activeTab}>
+
                                 <TabPane tabId="1" className=''>
                                     <Row className='align-items-center'>
                                         {taxeometr.map((item, index) => {
@@ -213,6 +218,7 @@ const Catalog = () => {
                                         })}
                                     </Row>
                                 </TabPane>
+
                                 <TabPane tabId="2" className=''>
                                     <Row>
                                         {gnss.map((item, index) => {
@@ -238,9 +244,9 @@ const Catalog = () => {
                                         {nivelir.map((item, index) => {
                                             return (
                                                 <div className="col-lg-6 mb-4" key={index}>
-                                                    <Link className='d-flex align-items-center myCard' to={`/catalog-nivelir/${item.id}`}  >
+                                                    <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
                                                         <div>
-                                                            <img style={{ width: '120px' }} src={`/img/${item.image}`} alt="" />
+                                                            <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
@@ -258,9 +264,9 @@ const Catalog = () => {
                                         {lazerniy.map((item, index) => {
                                             return (
                                                 <div className="col-lg-6 mb-4" key={index}>
-                                                    <Link className='d-flex align-items-center myCard' to={`/catalog-lazerniy/${item.id}`}  >
+                                                    <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
                                                         <div>
-                                                            <img style={{ width: '120px' }} src={`/img/${item.image}`} alt="" />
+                                                            <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
@@ -278,9 +284,9 @@ const Catalog = () => {
                                         {teodolit.map((item, index) => {
                                             return (
                                                 <div className="col-lg-6 mb-4" key={index}>
-                                                    <Link className='d-flex align-items-center myCard' to={`/catalog-teodolit/${item.id}`}  >
+                                                    <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
                                                         <div>
-                                                            <img style={{ width: '120px' }} src={`/img/${item.image}`} alt="" />
+                                                            <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
@@ -298,9 +304,9 @@ const Catalog = () => {
                                         {trassoiskatel.map((item, index) => {
                                             return (
                                                 <div className="col-lg-6 mb-4" key={index}>
-                                                    <Link className='d-flex align-items-center myCard' to={`/catalog-trassoiskatel/${item.id}`}  >
+                                                    <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
                                                         <div>
-                                                            <img style={{ width: '120px' }} src={`/img/${item.image}`} alt="" />
+                                                            <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
@@ -318,13 +324,13 @@ const Catalog = () => {
                                         {acsessuary.map((item, index) => {
                                             return (
                                                 <div className="col-lg-6 mb-4" key={index}>
-                                                    <Link className='d-flex align-items-center myCard' to={`/catalog-acsessuary/${item.id}`}  >
+                                                    <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
                                                         <div>
-                                                            <img style={{ width: '120px' }} src={`/img/${item.image}`} alt="" />
+                                                            <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                         </div>
                                                         <div>
                                                             <h5>{item.title}</h5>
-                                                            <p className='mt-3'>{item.description.substring(0, 40)}...</p>
+                                                            {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                         </div>
                                                     </Link>
                                                 </div>
