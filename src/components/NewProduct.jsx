@@ -52,7 +52,82 @@ const NewProduct = () => {
                             modules={[Autoplay, Pagination]}
                             className="mySwiper mt-5"
                         >
-                            {product.map((item, index) => {
+                            {product.slice(0, 10).map((item, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <Link to={`/new-catalog/${item.id}`} className="card h-100">
+                                            <img src={`../img/${item.image01}`} className="card-img-top w-100" alt="" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">{item.title}</h5>
+                                            </div>
+                                        </Link>
+                                    </SwiperSlide>
+                                )
+                            })}
+                        </Swiper>
+                        
+                        <Swiper
+                            breakpoints={{
+                                338: {
+                                    // width: 540,
+                                    slidesPerView: 1.4,
+                                },
+                                992: {
+                                    // width: 768,
+                                    slidesPerView: 3.5,
+                                },
+                            }}
+                            slidesPerView={3.5}
+                            spaceBetween={30}
+                            loop={true}
+                            autoplay={{
+                                delay: 5000,
+                                disableOnInteraction: false,
+                            }}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Autoplay, Pagination]}
+                            className="mySwiper mt-5"
+                        >
+                            {product.slice(10, 20).map((item, index) => {
+                                return (
+                                    <SwiperSlide key={index}>
+                                        <Link to={`/new-catalog/${item.id}`} className="card h-100">
+                                            <img src={`../img/${item.image01}`} className="card-img-top w-100" alt="" />
+                                            <div className="card-body">
+                                                <h5 className="card-title">{item.title}</h5>
+                                            </div>
+                                        </Link>
+                                    </SwiperSlide>
+                                )
+                            })}
+                        </Swiper>
+                        <Swiper
+                            breakpoints={{
+                                338: {
+                                    // width: 540,
+                                    slidesPerView: 1.4,
+                                },
+                                992: {
+                                    // width: 768,
+                                    slidesPerView: 3.5,
+                                },
+                            }}
+                            slidesPerView={3.5}
+                            spaceBetween={30}
+                            loop={true}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            }}
+                            pagination={{
+                                clickable: true,
+                            }}
+                            modules={[Autoplay, Pagination]}
+                            className="mySwiper mt-5"
+                        >
+                            {product.slice(20, 30).map((item, index) => {
                                 return (
                                     <SwiperSlide key={index}>
                                         <Link to={`/new-catalog/${item.id}`} className="card h-100">

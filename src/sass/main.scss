@@ -85,9 +85,9 @@ body {
         bottom: 0;
         height: 100vh;
         width: 100%;
-        img{
-            width: 200px;
-            height: 200px;
+
+        img {
+            width: 250px;
         }
     }
 
@@ -1238,10 +1238,18 @@ body {
 
     .productImages {
         height: 400px;
+
+        @media (max-width:992px) {
+            height: none;
+        }
     }
 
 
     .seeNewProduct {
+
+        @media (max-width:992px) {
+            padding: 0 !important;
+        }
 
         .line {
             border-bottom: 1px solid rgba(192, 192, 192, 0.479);
@@ -1286,6 +1294,24 @@ body {
         .mySwiper2 {
             border: 0.5px solid $darklight;
 
+            @media (max-width:992px) {
+                width: 100% !important;
+            }
+        }
+
+        td {
+
+            @media(max-width: 576px) {
+                font-size: 14px;
+            }
+        }
+
+        .td {
+
+            @media(max-width: 576px) {
+                padding-left: 10px;
+                text-align: right;
+            }
         }
 
         .xr {
@@ -1294,10 +1320,31 @@ body {
             }
         }
 
+        .seehnone{
+            display: none;
+
+            @media (max-width:992px) {
+                display: block;
+                margin-bottom: 50px !important;
+            }
+        }
+
+
+        .seehblock{
+            display: block;
+
+            @media (max-width:992px) {
+                display: none;
+            }
+        }
 
 
         .mySwiper {
             padding: 0 30px 0 0;
+
+            @media(max-width: 992px) {
+                padding: 0;
+            }
 
             .swiper-slide {
                 border: 0.5px solid $darklight;
@@ -1307,8 +1354,23 @@ body {
                     border: 2px solid $org;
                 }
 
+                @media(max-width: 992px) {
+                    width: 25%;
+                    height: 83px !important;
+                    margin-top: 10px;
+                }
+
             }
 
+        }
+
+        .swiper-wrapper {
+
+            @media(max-width: 992px) {
+                display: flex;
+                flex-direction: row !important;
+                justify-content: space-between;
+            }
         }
 
         .big_desc {
@@ -1353,7 +1415,7 @@ body {
             -webkit-backdrop-filter: blur(20px);
             backdrop-filter: blur(20px);
             bottom: 50px;
-            left: 25px;
+            left: 50px;
             border-radius: 50%;
             animation: anim1 3s linear infinite reverse;
             z-index: 998;
@@ -1380,7 +1442,7 @@ body {
             border-radius: 50%;
             position: fixed;
             bottom: 50px;
-            left: 25px;
+            left: 50px;
             z-index: 999;
             animation: anim2 2s ease-in-out infinite;
 

@@ -27,6 +27,7 @@ const Navbar = () => {
         axios.get(API + 'api/category')
             .then((res) => {
                 setCategories(res.data)
+                console.log(categories);
             })
             .catch(err => { console.log(err); })
     }
@@ -35,6 +36,7 @@ const Navbar = () => {
         await axios.get(API + `api/category/${id}`)
             .then((res) => {
                 setTaxeometr(res.data.products)
+                console.log(taxeometr);
             })
             .catch((err) => {
                 console.log(err);
@@ -85,33 +87,33 @@ const Navbar = () => {
                             <div className={`col-lg-12 nimadur ${burger ? '' : 'burgered'}`}>
                                 <ul className={`d-flex justify-content-between align-items-center`}>
                                     <li className='d-md-block d-lg-none'>
-                                        <Link className={`${location.pathname === '/' ? 'active' : ''}`} onClick={() => setBurger(false)}  to='/'> Главная </Link>
+                                        <Link className={`${location.pathname === '/' ? 'active' : ''}`} onClick={() => setBurger(false)} to='/'> Главная </Link>
                                     </li>
                                     <li>
                                         <Link to='/catalog'
-                                            onClick={() => setBurger(false)} 
+                                            onClick={() => setBurger(false)}
                                             className={`katalog ${location.pathname === '/catalog' ? 'active' : ''}`}
                                             onMouseEnter={() => {
                                                 setMyTabs(true)
-                                            }} 
+                                            }}
                                             id="katalog"
                                         >
                                             Каталог
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className={`${location.pathname === '/services' ? 'active' : ''}`} onClick={() => setBurger(false)}  to='/services'> Услуги </Link>
+                                        <Link className={`${location.pathname === '/services' ? 'active' : ''}`} onClick={() => setBurger(false)} to='/services'> Услуги </Link>
                                     </li>
                                     <li className='d-none d-lg-block'>
-                                        <Link onClick={() => setBurger(false)}  to='/'>
+                                        <Link onClick={() => setBurger(false)} to='/'>
                                             <img src="/img/logo.png" style={{ width: '180px' }} alt="" />
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link className={`${location.pathname === '/about' ? 'active' : ''}`} onClick={() => setBurger(false)}  to='/about'> О компании </Link>
+                                        <Link className={`${location.pathname === '/about' ? 'active' : ''}`} onClick={() => setBurger(false)} to='/about'> О компании </Link>
                                     </li>
                                     <li>
-                                        <Link className={`${location.pathname === '/contacts' ? 'active' : ''}`} onClick={() => setBurger(false)}  to='/contacts'> Контакты </Link>
+                                        <Link className={`${location.pathname === '/contacts' ? 'active' : ''}`} onClick={() => setBurger(false)} to='/contacts'> Контакты </Link>
                                     </li>
                                 </ul>
                             </div>
@@ -157,7 +159,7 @@ const Navbar = () => {
                                                         <div key={index2} className="col-lg-6 mb-4">
                                                             <a className='d-flex align-items-center' href={`/new-catalog/${item2.id}`}  >
                                                                 <div>
-                                                                    <img style={{ width: '80px' }} src={`/img/${item2.image01.substring(0, 40)}`} alt="" />
+                                                                    <img style={{ width: '80px' }} src={`/img/${item2.image01}`} alt="" />
                                                                 </div>
                                                                 <div className='ml-2'>
                                                                     <h6>{item2.title}</h6>

@@ -64,9 +64,12 @@ const SeeNewProduct = (props) => {
                 </div> : ''}
             <div className="seeNewProduct pt-5 mt-5">
                 <div className="container">
+                <h3 className='seehnone'>{product.title}</h3>
 
                     <div className="row align-items-center">
-                        <div className="col-lg-6 d-flex productImages">
+
+                        <div className="col-lg-6 flex-column flex-lg-row d-flex productImages">
+
                             {/* <img onClick={() => setIsOpen(true)} className='w-100' style={{ cursor: 'pointer', backgroundColor: 'red' }} src={`/img/${product.image}`} alt="" /> */}
                             <Swiper
                                 loop={true}
@@ -139,7 +142,7 @@ const SeeNewProduct = (props) => {
                         </div>
 
                         <div className="col-lg-6 ml-auto">
-                            <h3>{product.title}</h3>
+                            <h3 className='seehblock'>{product.title}</h3>
                             <br />
                             <h4 className='mt-3 mb-3 xr'>
                                 <span>Х</span>АРАКТЕРИСТИКИ
@@ -153,7 +156,7 @@ const SeeNewProduct = (props) => {
                                                 <>
 
                                                     <td key={item.id}>
-                                                        {item} 
+                                                        {item}
                                                     </td>
 
                                                     <br />
@@ -166,7 +169,7 @@ const SeeNewProduct = (props) => {
                                             return (
                                                 <>
 
-                                                    <td key={item.id}>
+                                                    <td className='td' key={item.id}>
                                                         {item}
                                                     </td>
 
@@ -177,7 +180,7 @@ const SeeNewProduct = (props) => {
                                     </tr>
                                 </tbody>
                             </table>
-                            
+
                             <table>
                                 <tbody className='d-flex justify-content-between'>
                                     <tr className='d-flex flex-column'>
@@ -186,7 +189,7 @@ const SeeNewProduct = (props) => {
                                                 <>
 
                                                     <td key={item.id}>
-                                                        {item} 
+                                                        {item}
                                                     </td>
 
                                                     <br />
@@ -199,7 +202,7 @@ const SeeNewProduct = (props) => {
                                             return (
                                                 <>
 
-                                                    <td key={item.id}>
+                                                    <td className='td' key={item.id}>
                                                         {item}
                                                     </td>
 
@@ -210,7 +213,7 @@ const SeeNewProduct = (props) => {
                                     </tr>
                                 </tbody>
                             </table>
-                            
+
                             {/* <ul>
                                 {description_key?.map((item, index) => {
                                     return (
