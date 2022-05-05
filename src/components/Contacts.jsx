@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { ScaleLoader } from 'react-spinners'
 
 const Contacts = () => {
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+
+    setTimeout(() => {
+      setLoading(false)
+    }, 1400)
+  }, [])
   return (
     <>
+      {loading ?
+        <div className="loader">
+          <img src="/img/logo.png" alt="" />
+          <ScaleLoader
+            className="loader"
+            loading={loading}
+            size="70"
+            color="#d6171f"
+          />
+        </div> : ''}
       <div className="contacts">
         <div className="container">
           <div className="row d-flex align-items-center">
