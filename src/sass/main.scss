@@ -1404,7 +1404,7 @@ body {
 
     .phoneWrap {
         position: relative;
-
+        z-index: 99999;
 
         &::after {
             content: '';
