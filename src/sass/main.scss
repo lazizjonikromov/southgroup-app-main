@@ -420,8 +420,21 @@ body {
         backdrop-filter: blur(30px);
         background-color: #ffffffb6;
         box-shadow: 0 0 10px rgb(126, 123, 123);
+        overflow-y: auto;
+        height: 70vh;
 
-
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+    
+        &::-webkit-scrollbar-track {
+            background: transparent;
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background: silver;
+            border-radius: 15px;
+        }
 
         .closes {
             position: absolute;
