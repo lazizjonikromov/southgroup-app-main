@@ -46,9 +46,9 @@ ReactDOM.render(
       <Route path="/contacts" exact component={Contacts} />
 
       <Route path="/catalog/:id" exact component={CatalogView} />
-      <Route path="*" component={PageNotFound} />
-      
-      
+      {/* <Route path={['/catalog/:id', '/catalog']} component={CatalogView} /> */}
+      <Route component={PageNotFound} />
+    
     </Switch>
 
     <Footer />
