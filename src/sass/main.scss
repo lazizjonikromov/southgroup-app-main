@@ -201,7 +201,7 @@ body {
         width: 100%;
         left: 0;
         top: 0;
-        z-index: 9;
+        z-index: 999999;
         backdrop-filter: blur(30px);
         background-color: #ffffff8a;
         user-select: none;
@@ -1199,9 +1199,17 @@ body {
                 color: $org;
             }
         }
+
+        img{
+            @media (max-width:992px) {
+                object-fit: contain;
+                width: 100% !important;
+            }
+        }
+
     }
 
-
+    
     .contacts {
         margin-top: 50px;
 
