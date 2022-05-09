@@ -7,7 +7,7 @@ const Partners = () => {
     <>
       <div className="partners">
         <div className="container">
-          <h2><span>Н</span>аши партнеры</h2>
+          {/* <h2><span>Н</span>аши партнеры</h2>
           <div className="row partner d-flex align-items-center">
             <div className="col-lg-5 left">
               <h5>Компании сотрудничают с нами по всему миру</h5>
@@ -19,7 +19,7 @@ const Partners = () => {
               <img src="./img/nivelir-header-03.webp" alt=""/>
               <div className='bot-span'></div>
             </div>
-          </div>
+          </div> */}
           
           <div className="brend-partners">
             <div className="container">

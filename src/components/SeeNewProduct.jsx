@@ -181,7 +181,7 @@ const SeeNewProduct = (props) => {
                                 </tbody>
                             </table>
 
-                            <table>
+                            {/* <table>
                                 <tbody className='d-flex justify-content-between'>
                                     <tr className='d-flex flex-column'>
                                         {description_key?.map((item, index) => {
@@ -212,7 +212,7 @@ const SeeNewProduct = (props) => {
                                         })}
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> */}
 
                             {/* <ul>
                                 {description_key?.map((item, index) => {

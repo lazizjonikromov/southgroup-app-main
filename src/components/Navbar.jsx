@@ -305,7 +305,7 @@ const Navbar = () => {
                                             {taxeometr.map((item, index) => {
                                                 return (
                                                     <div className="col-lg-6 mb-4" key={index}>
-                                                        <Link className='d-flex myCard align-items-center' to={`/new-catalog/${item.id}`}  >
+                                                        <a  className='d-flex myCard align-items-center' href={`/new-catalog/${item.id}`}  >
                                                             <div>
                                                                 <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                             </div>
@@ -313,7 +313,7 @@ const Navbar = () => {
                                                                 <h5>{item.title}</h5>
                                                                 {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                             </div>
-                                                        </Link>
+                                                        </a>
                                                     </div>
                                                 )
                                             })}
@@ -325,7 +325,7 @@ const Navbar = () => {
                                             {gnss.map((item, index) => {
                                                 return (
                                                     <div className="col-lg-6 mb-4" key={index}>
-                                                        <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
+                                                        <a  className='d-flex align-items-center myCard' href={`/new-catalog/${item.id}`}  >
                                                             <div>
                                                                 <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                             </div>
@@ -333,7 +333,7 @@ const Navbar = () => {
                                                                 <h5>{item.title}</h5>
                                                                 {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                             </div>
-                                                        </Link>
+                                                        </a>
                                                     </div>
                                                 )
                                             })}
@@ -345,7 +345,7 @@ const Navbar = () => {
                                             {nivelir.map((item, index) => {
                                                 return (
                                                     <div className="col-lg-6 mb-4" key={index}>
-                                                        <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
+                                                        <a  className='d-flex align-items-center myCard' href={`/new-catalog/${item.id}`}  >
                                                             <div>
                                                                 <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                             </div>
@@ -353,7 +353,7 @@ const Navbar = () => {
                                                                 <h5>{item.title}</h5>
                                                                 {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                             </div>
-                                                        </Link>
+                                                        </a>
                                                     </div>
                                                 )
                                             })}
@@ -365,7 +365,7 @@ const Navbar = () => {
                                             {lazerniy.map((item, index) => {
                                                 return (
                                                     <div className="col-lg-6 mb-4" key={index}>
-                                                        <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
+                                                        <a  className='d-flex align-items-center myCard' href={`/new-catalog/${item.id}`}  >
                                                             <div>
                                                                 <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                             </div>
@@ -373,19 +373,19 @@ const Navbar = () => {
                                                                 <h5>{item.title}</h5>
                                                                 {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                             </div>
-                                                        </Link>
+                                                        </a>
                                                     </div>
                                                 )
                                             })}
                                         </Row>
                                     </TabPane>
 
-                                    <TabPane tabId="5" className='   '>
+                                    <TabPane tabId="5" className=''>
                                         <Row>
                                             {teodolit.map((item, index) => {
                                                 return (
                                                     <div className="col-lg-6 mb-4" key={index}>
-                                                        <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
+                                                        <a  className='d-flex align-items-center myCard' href={`/new-catalog/${item.id}`}  >
                                                             <div>
                                                                 <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                             </div>
@@ -393,7 +393,7 @@ const Navbar = () => {
                                                                 <h5>{item.title}</h5>
                                                                 {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                             </div>
-                                                        </Link>
+                                                        </a>
                                                     </div>
                                                 )
                                             })}
@@ -405,7 +405,7 @@ const Navbar = () => {
                                             {trassoiskatel.map((item, index) => {
                                                 return (
                                                     <div className="col-lg-6 mb-4" key={index}>
-                                                        <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
+                                                        <a  className='d-flex align-items-center myCard' href={`/new-catalog/${item.id}`}  >
                                                             <div>
                                                                 <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                             </div>
@@ -413,7 +413,7 @@ const Navbar = () => {
                                                                 <h5>{item.title}</h5>
                                                                 {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                             </div>
-                                                        </Link>
+                                                        </a>
                                                     </div>
                                                 )
                                             })}
@@ -425,7 +425,7 @@ const Navbar = () => {
                                             {acsessuary.map((item, index) => {
                                                 return (
                                                     <div className="col-lg-6 mb-4" key={index}>
-                                                        <Link className='d-flex align-items-center myCard' to={`/new-catalog/${item.id}`}  >
+                                                        <a  className='d-flex align-items-center myCard' href={`/new-catalog/${item.id}`}  >
                                                             <div>
                                                                 <img style={{ width: '120px' }} src={`/img/${item.image01}`} alt="" />
                                                             </div>
@@ -433,7 +433,7 @@ const Navbar = () => {
                                                                 <h5>{item.title}</h5>
                                                                 {/* <p className='mt-3'>{item.description.substring(0, 40)}...</p> */}
                                                             </div>
-                                                        </Link>
+                                                        </a>
                                                     </div>
                                                 )
                                             })}
@@ -448,7 +448,6 @@ const Navbar = () => {
                 </div>
 
             </div>
-
 
 
 

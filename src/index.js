@@ -25,6 +25,7 @@ import Contacts from "./components/Contacts";
 import CatalogView from "./pages/CatalogView";
 import Up from "./components/Up";
 import Phone from "./components/Phone";
+import PageNotFound from "./components/PageNotFound";
 
 ReactDOM.render(
   <Router>
@@ -45,8 +46,9 @@ ReactDOM.render(
       <Route path="/contacts" exact component={Contacts} />
 
       <Route path="/catalog/:id" exact component={CatalogView} />
-       
-
+      <Route path="*" component={PageNotFound} />
+      
+      
     </Switch>
 
     <Footer />
