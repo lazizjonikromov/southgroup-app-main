@@ -35,7 +35,7 @@ const CatalogView = (props) => {
         <>
             {loading ?
                 <div className="loader">
-                    <img src="/img/logo.png" alt="" />
+                    <img src="/img/south.png" alt="" />
                     <ScaleLoader
                         className="loader"
                         loading={loading}

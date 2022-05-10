@@ -217,7 +217,7 @@ const Navbar = () => {
                             <div className="mob-nav d-flex align-items-center">
                                 <div className="col-lg-1 col-4 m-0 d-md-block d-lg-none">
                                     <Link onClick={() => setMyTabs(false)} to='/'>
-                                        <img src="/img/logo.png" style={{ width: '180px' }} alt="" />
+                                        <img src="/img/south.png" style={{ width: '180px' }} alt="" />
                                     </Link>
                                 </div>
 
@@ -250,7 +250,7 @@ const Navbar = () => {
                                     </li>
                                     <li className='d-none d-lg-block'>
                                         <Link onClick={() => {setBurger(false); setMyTabs(false)}} to='/'>
-                                            <img src="/img/logo.png" style={{ width: '180px' }} alt="" />
+                                            <img src="/img/south.png" style={{ width: '180px' }} alt="" />
                                         </Link>
                                     </li>
                                     <li>

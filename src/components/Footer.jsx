@@ -26,7 +26,7 @@ const Footer = () => {
                         <div className="col-lg-3 col-md-12">
                             <div className="logo-footer">
                                 <Link to='/' href="#">
-                                    <img src="/img/logo.png" style={{ width: '250px' }} alt="" />
+                                    <img src="/img/south.png" style={{ width: '250px' }} alt="" />
                                 </Link>
                             </div>
                         </div>
