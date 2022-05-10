@@ -33,7 +33,7 @@ export default function App() {
             <div className="header">
                 <div className="container">
                     <div className="row">
-                        <div className="col-12 header-swiper">
+                        <div className="col-9  mx-auto header-swiper">
                             <Swiper
                                 effect={"cube"}
                                 grabCursor={true}
@@ -45,10 +45,10 @@ export default function App() {
                                     shadowOffset: 20,
                                     shadowScale: 0.94,
                                 }}
-                                autoplay={{
-                                    delay: 5000,
-                                    disableOnInteraction: false,
-                                }}
+                                    autoplay={{
+                                        delay: 5000,
+                                        disableOnInteraction: false,
+                                    }}
                                 pagination={{
                                     clickable: true,
                                 }}

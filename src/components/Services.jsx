@@ -80,9 +80,13 @@ const Services = () => {
                         </p>
                     </div>
 
-                    <div className="row mt-5 d-flex ">
-                        <img src="./img/sertificate-01.png" alt="" className='w-50' />
-                        <img src="./img/sertificate-02.png" alt="" className='w-50' />
+                    <div className="row mt-5 d-flex flex-column">
+                        <div className="col-10 mx-auto w-50">
+                            <img src="./img/sertificate-01.png" alt="" className='w-100' />
+                        </div>
+                        <div className="col-10 mx-auto w-75">
+                            <img src="./img/sertificate-02.png" alt="" className='w-100' />
+                        </div>
                     </div>
 
                 </div>

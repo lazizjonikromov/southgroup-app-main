@@ -40,6 +40,8 @@ ReactDOM.render(
 
       <Route path="/catalog" exact component={Catalog} />
       <Route path="/new-catalog/:id" exact component={SeeNewProduct} />
+      
+      {/* <Route exact path={['/new-catalog/:id', '/new-catalog']} component={SeeNewProduct} /> */}
 
       <Route path="/services" exact component={Services} />
       <Route path="/about" exact component={About} />
@@ -47,7 +49,8 @@ ReactDOM.render(
 
       <Route path="/catalog/:id" exact component={CatalogView} />
       {/* <Route path={['/catalog/:id', '/catalog']} component={CatalogView} /> */}
-      <Route component={PageNotFound} />
+      <Route path="/*" exact component={PageNotFound} />
+      <Route path="/404" exact component={PageNotFound} />
     
     </Switch>
 

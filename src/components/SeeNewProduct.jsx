@@ -44,6 +44,7 @@ const SeeNewProduct = (props) => {
             })
     }
 
+
     useEffect(() => {
         getNewProduct()
         setTimeout(() => {
@@ -64,7 +65,7 @@ const SeeNewProduct = (props) => {
                 </div> : ''}
             <div className="seeNewProduct pt-5 mt-5">
                 <div className="container">
-                <h3 className='seehnone'>{product.title}</h3>
+                    <h3 className='seehnone'>{product.title}</h3>
 
                     <div className="row align-items-center">
 

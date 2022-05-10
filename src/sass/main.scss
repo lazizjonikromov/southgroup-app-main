@@ -562,7 +562,7 @@ body {
             height: 100%;
 
             .swiper-slide img{
-                object-fit: contain !important;
+                // object-fit: contain !important;
                 height: 600px;
             }
             
@@ -770,6 +770,12 @@ body {
 
                 .img {
                     z-index: 1;
+                    img{
+                        height: 455px;
+                        @media (max-width:992px) {
+                            height: 250px;
+                        }
+                    }
                 }
 
                 .span {
