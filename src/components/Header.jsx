@@ -33,7 +33,7 @@ export default function App() {
             <div className="header">
                 <div className="container">
                     <div className="row">
-                        <div className="col-9  mx-auto header-swiper">
+                        <div className="col-10  mx-auto header-swiper">
                             <Swiper
                                 effect={"cube"}
                                 grabCursor={true}
@@ -56,7 +56,7 @@ export default function App() {
                                 className="swiper mySwiper">
 
                                 <div className="swiper-wrapper">
-                                    {category?.map((item, index) => {
+                                    {/* {category.splice(0,4)?.map((item, index) => {
                                         return (
                                             <SwiperSlide key={index} style={{ transition: 'all 0.3s ease' }} className="swiper-slide card position-relative">
                                                 <img src={`/img/${item.header_image}`} alt="" className="card-img" />
@@ -71,8 +71,8 @@ export default function App() {
                                                 </div>
                                             </SwiperSlide>
                                         )
-                                    })}
-                                    {/* <SwiperSlide style={{ transition: 'all 2s ease' }} className="swiper-slide card position-relative">
+                                    })} */}
+                                    <SwiperSlide style={{ transition: 'all 2s ease' }} className="swiper-slide card position-relative">
                                         <img src="/img/taxeometr-header-01.webp" alt="" className="card-img" />
                                         <div className="blur"></div>
                                         <div className="card-img-overlay zed">
@@ -103,11 +103,24 @@ export default function App() {
                                             <h5 className="card-title">
                                                 Нивелиры
                                             </h5>
-                                            <Link to='/catalog' className="myBtn uppercase"
+                                            <Link to='/catalog/3' className="myBtn uppercase"
                                             ><span></span> Перейти в Каталог
                                             </Link>
                                         </div>
-                                    </SwiperSlide> */}
+                                    </SwiperSlide>
+                                    
+                                    <SwiperSlide style={{ transition: 'all 2s ease' }} className="swiper-slide card position-relative">
+                                        <img src="/img/lazerniy-header-04.webp" alt="" className="card-img" />
+                                        <div className="blur"></div>
+                                        <div className="card-img-overlay zed">
+                                            <h5 className="card-title">
+                                                Лазерные дальномеры
+                                            </h5>
+                                            <Link to='/catalog/4' className="myBtn uppercase"
+                                            ><span></span> Перейти в Каталог
+                                            </Link>
+                                        </div>
+                                    </SwiperSlide>
                                 </div>
                                 <div className="swiper-pagination"></div>
                             </Swiper>
