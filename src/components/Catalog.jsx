@@ -22,7 +22,7 @@ const Catalog = () => {
                         <div className="col-12">
                             <h2><span>П</span>опулярный каталог</h2>
                         </div>
-                        {category?.map((item, index) => {
+                        {/* {category?.map((item, index) => {
                             return (
                                 <div key={index} className="col-lg-3 mt-5 col-md-6 pop-category">
                                     <div className="card h-100">
@@ -41,6 +41,69 @@ const Catalog = () => {
                                 </div>
                             )
                         })}
+                         */}
+
+
+                        <div className="col-lg-3 mt-5 col-md-6 pop-category">
+                            <div className="card h-100">
+                                <Link to={`/catalog/1`}>
+                                    <img
+                                        src={`/img/taxeometr-category.webp`}
+                                        className="w-100"
+                                        height="300px"
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title text-center">Тахеометры</h5>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3 mt-5 col-md-6 pop-category">
+                            <div className="card h-100">
+                                <Link to={`/catalog/2`}>
+                                    <img
+                                        src={`/img/gnss-category.webp`}
+                                        className="w-100"
+                                        height="300px"
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title text-center">GNSS приемники</h5>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3 mt-5 col-md-6 pop-category">
+                            <div className="card h-100">
+                                <Link to={`/catalog/3`}>
+                                    <img
+                                        src={`/img/nivelir-category.webp`}
+                                        className="w-100"
+                                        height="300px"
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title text-center">Нивелиры</h5>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+
+                        <div className="col-lg-3 mt-5 col-md-6 pop-category">
+                            <div className="card h-100">
+                                <Link to={`/catalog/7`}>
+                                    <img
+                                        src={`/img/acsessuary-category.webp`}
+                                        className="w-100"
+                                        height="300px"
+                                    />
+                                    <div className="card-body">
+                                        <h5 className="card-title text-center">Аксессуары</h5>
+                                    </div>
+                                </Link>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

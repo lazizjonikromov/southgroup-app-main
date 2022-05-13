@@ -345,7 +345,6 @@ const Catalog = () => {
 
                 </div>
             </div>
-            <Partners />
         </>
     )
 }
