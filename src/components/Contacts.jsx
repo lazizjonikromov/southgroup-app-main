@@ -31,8 +31,8 @@ const Contacts = () => {
               <div className="contact">
                 <img src="./img/location.png" alt="" />
                 <div className="contact-text ml-3">
-                  <h4>Город Ташкент, Мирабадский район, Улица. Богсарой 45, офис 401</h4>
-                  <h5>Пн-Сб 09:00 - 21:00</h5>
+                  <h4>Город Ташкент, Яккасарайский район, 45 улица Марьям Якубовой, офис 401</h4>
+                  <h5>Пн-Вс 09:00 - 19:00</h5>
                 </div>
               </div>
               <div className="contact d-flex mt-5">
@@ -52,7 +52,8 @@ const Contacts = () => {
               </div>
             </div>
             <div className="col-lg-6 map">
-              <iframe className='w-100' title='Location' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11988.079578932638!2d69.30549347141117!3d41.30843081161489!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xa193c5c2e7c5a340!2sKoko%20Digital%20Agency!5e0!3m2!1sru!2s!4v1647415474430!5m2!1sru!2s" height="500px" loading="lazy"></iframe>
+              <iframe className='w-100' title='Location' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1498.825644905572!2d69.26399623002476!3d41.29469316957734!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc973cece51e56d44!2sSouth%20Group!5e0!3m2!1sru!2s!4v1652705692643!5m2!1sru!2s" height="500" 
+              loading="lazy"></iframe>
             </div>
           </div>
         </div>
