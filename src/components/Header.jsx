@@ -45,10 +45,10 @@ export default function App() {
                                     shadowOffset: 20,
                                     shadowScale: 0.94,
                                 }}
-                                    autoplay={{
-                                        delay: 5000,
-                                        disableOnInteraction: false,
-                                    }}
+                                // autoplay={{
+                                //     delay: 5000,
+                                //     disableOnInteraction: false,
+                                // }}
                                 pagination={{
                                     clickable: true,
                                 }}
@@ -73,53 +73,63 @@ export default function App() {
                                         )
                                     })} */}
                                     <SwiperSlide style={{ transition: 'all 2s ease' }} className="swiper-slide card position-relative">
-                                        <img src="/img/taxeometr-header-01.webp" alt="" className="card-img" />
-                                        <div className="blur"></div>
-                                        <div className="card-img-overlay zed">
-                                            <h5 className="card-title">
-                                                Тахеометры
-                                            </h5>
-                                            <Link to='/catalog/1' className="myBtn uppercase"
-                                            ><span></span> Перейти в Каталог
-                                            </Link>
-                                        </div>
+                                        <Link to='/catalog/1'>
+                                            <img src="/img/taxeometr-header-01.webp" alt="" className="card-img" />
+                                            <div className="blur"></div>
+                                            <div className="card-img-overlay zed">
+                                                {/* <h5 className="card-title">
+                                                    Тахеометры
+                                                </h5>
+                                                <Link to='/catalog/1' className="myBtn uppercase"
+                                                ><span></span> Перейти в Каталог
+                                                </Link> */}
+                                            </div>
+                                        </Link>
                                     </SwiperSlide>
+
                                     <SwiperSlide style={{ transition: 'all 2s ease' }} className="swiper-slide card position-relative">
-                                        <img src="/img/gnss-header-02.webp" alt="" className="card-img" />
-                                        <div className="blur"></div>
-                                        <div className="card-img-overlay zed">
-                                            <h5 className="card-title">
+                                        <Link to='/catalog/2'>
+                                            <img src="/img/gnss-header-02.webp" alt="" className="card-img" />
+                                            <div className="blur"></div>
+                                            <div className="card-img-overlay zed">
+                                                {/* <h5 className="card-title">
                                                 GNSS приемники
                                             </h5>
                                             <Link to='/catalog/2' className="myBtn uppercase"
                                             ><span></span> Перейти в Каталог
-                                            </Link>
-                                        </div>
+                                            </Link> */}
+                                            </div>
+                                        </Link>
                                     </SwiperSlide>
+
                                     <SwiperSlide style={{ transition: 'all 2s ease' }} className="swiper-slide card position-relative">
-                                        <img src="/img/nivelir-header-03.webp" alt="" className="card-img" />
-                                        <div className="blur"></div>
-                                        <div className="card-img-overlay zed">
-                                            <h5 className="card-title">
+                                        <Link to='/catalog/3'>
+                                            <img src="/img/nivelir-header-03.webp" alt="" className="card-img" />
+                                            <div className="blur"></div>
+                                            <div className="card-img-overlay zed">
+                                                {/* <h5 className="card-title">
                                                 Нивелиры
                                             </h5>
                                             <Link to='/catalog/3' className="myBtn uppercase"
                                             ><span></span> Перейти в Каталог
-                                            </Link>
-                                        </div>
+                                            </Link> */}
+                                            </div>
+                                        </Link>
                                     </SwiperSlide>
-                                    
+
                                     <SwiperSlide style={{ transition: 'all 2s ease' }} className="swiper-slide card position-relative">
-                                        <img src="/img/lazerniy-header-04.webp" alt="" className="card-img" />
-                                        <div className="blur"></div>
-                                        <div className="card-img-overlay zed">
-                                            <h5 className="card-title">
+                                        <Link to='/catalog/4'>
+                                            <img src="/img/lazerniy-header-04.webp" alt="" className="card-img" />
+                                            <div className="blur"></div>
+                                            <div className="card-img-overlay zed">
+                                                {/* <h5 className="card-title">
                                                 Лазерные дальномеры
                                             </h5>
                                             <Link to='/catalog/4' className="myBtn uppercase"
                                             ><span></span> Перейти в Каталог
-                                            </Link>
-                                        </div>
+                                            </Link> */}
+                                            </div>
+                                        </Link>
                                     </SwiperSlide>
                                 </div>
                                 <div className="swiper-pagination"></div>
