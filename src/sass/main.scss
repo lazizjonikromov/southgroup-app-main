@@ -569,10 +569,10 @@ body {
             height: 100%;
 
             .swiper-slide img{
-                height: 730px;
+                // height: 730px;
                 // width: 1440px;
                 @media (max-width:992px) {
-                    height: 217px;
+                    // height: 217px;
                     object-fit: contain;
                 }
             }
