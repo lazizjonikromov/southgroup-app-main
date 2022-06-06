@@ -32,7 +32,7 @@ const History = () => {
                             <div className="span"></div>
                         </div>
                         <div className="col-lg-6 right">
-                            <img src="./img/gnss-header-02.webp" alt="" />
+                            <img src="./img/history-02.webp" alt="" />
                         </div>
                     </div>
                 </div>
