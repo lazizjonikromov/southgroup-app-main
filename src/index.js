@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import "./sass/main.scss";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import Cursor from "./components/cursor/Cursor";
 import CustomCursor from "./components/cursor/CustomCursor";
 import Navbar from "./components/Navbar";
