@@ -407,7 +407,7 @@ const Navbar = () => {
                                         </Row>
                                     </TabPane>
 
-                                    <TabPane tabId="6" className='   '>
+                                    <TabPane tabId="6" className=''>
                                         <Row>
                                             {trassoiskatel.map((item, index) => {
                                                 return (
