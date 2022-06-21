@@ -347,7 +347,7 @@ const Navbar = () => {
                                         </Row>
                                     </TabPane>
 
-                                    <TabPane tabId="3" className='   '>
+                                    <TabPane tabId="3" className=''>
                                         <Row>
                                             {nivelir.map((item, index) => {
                                                 return (
