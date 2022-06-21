@@ -367,7 +367,7 @@ const Navbar = () => {
                                         </Row>
                                     </TabPane>
 
-                                    <TabPane tabId="4" className='   '>
+                                    <TabPane tabId="4" className=''>
                                         <Row>
                                             {lazerniy.map((item, index) => {
                                                 return (
